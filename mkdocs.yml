@@ -1,0 +1,15 @@
+site_name: BigData
+pages:
+- "Home": 'index.md'
+- "Architecture":
+  - "Apache Ambari": 'ambari.md'
+  - "Apache Nutch": 'nutch.md'
+  - "Apache Spark": 'spark.md'
+  - "Apache HBase": 'hbase.md'
+  - "HDFS": 'hdfs.md'
+  - "Kibana": 'kibana.md'
+  - "Logstash": 'logstash.md'
+  - "Neo4J": 'neo4j.md'
+  - "Elasticsearch": 'elasticsearch.md'
+markdown_extensions:
+    - footnotes

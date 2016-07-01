@@ -1,0 +1,244 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to Javascript Tutorial\n\n\nThis is an introduction of magizbox team.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#welcome-to-javascript-tutorial", 
+            "text": "This is an introduction of magizbox team.", 
+            "title": "Welcome to Javascript Tutorial"
+        }, 
+        {
+            "location": "/101/", 
+            "text": "Javascript", 
+            "title": "101"
+        }, 
+        {
+            "location": "/101/#javascript", 
+            "text": "", 
+            "title": "Javascript"
+        }, 
+        {
+            "location": "/201/", 
+            "text": "1. Code Formatting\n\n\nIndent with 2 spaces\n\n\n// Object initializer.\nvar inset = {\n  top: 10,\n  right: 20,\n  bottom: 15,\n  left: 12\n};\n\n// Array initializer.\nthis.rows_ = [\n  '\nSlartibartfast\n \nfjordmaster@magrathea.com\n',\n  '\nZaphod Beeblebrox\n \ntheprez@universe.gov\n',\n  '\nFord Prefect\n \nford@theguide.com\n',\n  '\nArthur Dent\n \nhas.no.tea@gmail.com\n',\n  '\nMarvin the Paranoid Android\n \nmarv@googlemail.com\n',\n  'the.mice@magrathea.com'\n];\n\n// Used in a method call.\ngoog.dom.createDom(goog.dom.TagName.DIV, {\n  id: 'foo',\n  className: 'some-css-class',\n  style: 'display:none'\n}, 'Hello, world!');\n\n\n\n\n2. Naming\n\n\nfunctionNamesLikeThis\nvariableNamesLikeThis\nClassNamesLikeThis\nEnumNamesLikeThis\nmethodNamesLikeThis\nCONSTANT_VALUES_LIKE_THIS\nfoo.namespaceNamesLikeThis.bar\nfilenameslikethis.js.\n\n\n\n\n3. Comment\n\n\nUse \nJSDoc\n\n\n3.1 Class Comment\n\n\n/**\n * Class making something fun and easy.\n * @param {string} arg1 An argument that makes this more interesting.\n * @param {Array.\nnumber\n} arg2 List of numbers to be processed.\n * @constructor\n * @extends {goog.Disposable}\n */\nproject.MyClass = function(arg1, arg2) {\n  // ...\n};\ngoog.inherits(project.MyClass, goog.Disposable);\n\n\n\n\n3.2 Method Comment\n\n\n/**\n * Operates on an instance of MyClass and returns something.\n * @param {project.MyClass} obj Instance of MyClass which leads to a long\n *     comment that needs to be wrapped to two lines.\n * @return {boolean} Whether something occurred.\n */\nfunction PR_someMethod(obj) {\n  // ...\n}\n\n\n\n\nMultiline String\n\n\nstr = \n\\\nline 1\\\nline 2\\\nline 3\n;\n\n\n\n\n4. Functions\n\n\n4.1 Define and call a function\n\n\nfunction sum(a, b) {\n  var c = a + b;\n  return c;\n}\n\nvar result = sum(1, 2);\n\n\n\n\n\n\n\n\n\n\n\n\nWhat's the cleanest way to write a multiline string in JavaScript? [duplicate]\n\n\n\n\n\n\nGoogle JavaScript Style Guide", 
+            "title": "201"
+        }, 
+        {
+            "location": "/201/#1-code-formatting", 
+            "text": "Indent with 2 spaces  // Object initializer.\nvar inset = {\n  top: 10,\n  right: 20,\n  bottom: 15,\n  left: 12\n};\n\n// Array initializer.\nthis.rows_ = [\n  ' Slartibartfast   fjordmaster@magrathea.com ',\n  ' Zaphod Beeblebrox   theprez@universe.gov ',\n  ' Ford Prefect   ford@theguide.com ',\n  ' Arthur Dent   has.no.tea@gmail.com ',\n  ' Marvin the Paranoid Android   marv@googlemail.com ',\n  'the.mice@magrathea.com'\n];\n\n// Used in a method call.\ngoog.dom.createDom(goog.dom.TagName.DIV, {\n  id: 'foo',\n  className: 'some-css-class',\n  style: 'display:none'\n}, 'Hello, world!');", 
+            "title": "1. Code Formatting"
+        }, 
+        {
+            "location": "/201/#2-naming", 
+            "text": "functionNamesLikeThis\nvariableNamesLikeThis\nClassNamesLikeThis\nEnumNamesLikeThis\nmethodNamesLikeThis\nCONSTANT_VALUES_LIKE_THIS\nfoo.namespaceNamesLikeThis.bar\nfilenameslikethis.js.", 
+            "title": "2. Naming"
+        }, 
+        {
+            "location": "/201/#3-comment", 
+            "text": "Use  JSDoc", 
+            "title": "3. Comment"
+        }, 
+        {
+            "location": "/201/#31-class-comment", 
+            "text": "/**\n * Class making something fun and easy.\n * @param {string} arg1 An argument that makes this more interesting.\n * @param {Array. number } arg2 List of numbers to be processed.\n * @constructor\n * @extends {goog.Disposable}\n */\nproject.MyClass = function(arg1, arg2) {\n  // ...\n};\ngoog.inherits(project.MyClass, goog.Disposable);", 
+            "title": "3.1 Class Comment"
+        }, 
+        {
+            "location": "/201/#32-method-comment", 
+            "text": "/**\n * Operates on an instance of MyClass and returns something.\n * @param {project.MyClass} obj Instance of MyClass which leads to a long\n *     comment that needs to be wrapped to two lines.\n * @return {boolean} Whether something occurred.\n */\nfunction PR_someMethod(obj) {\n  // ...\n}", 
+            "title": "3.2 Method Comment"
+        }, 
+        {
+            "location": "/201/#multiline-string", 
+            "text": "str =  \\\nline 1\\\nline 2\\\nline 3 ;", 
+            "title": "Multiline String"
+        }, 
+        {
+            "location": "/201/#4-functions", 
+            "text": "", 
+            "title": "4. Functions"
+        }, 
+        {
+            "location": "/201/#41-define-and-call-a-function", 
+            "text": "function sum(a, b) {\n  var c = a + b;\n  return c;\n}\n\nvar result = sum(1, 2);      What's the cleanest way to write a multiline string in JavaScript? [duplicate]    Google JavaScript Style Guide", 
+            "title": "4.1 Define and call a function"
+        }, 
+        {
+            "location": "/data_string/", 
+            "text": "sprintf\n\n\nIn \nindex.html\n\n\nscript src=\ncdnjs.cloudflare.com/ajax/libs/sprintf/1.0.3/sprintf.js\n/\n\n\n\n\n\n\nIn \nscript.js\n\n\n// arguments\nsprintf(\n%1$s %2$s\n, \nhello\n, \nsprintf\n)\n# hello sprintf\n\n// object\nvar user = {\n    name: \nDolly\n\n}\nsprintf(\nHello %(name)s\n, user)\n# Hello Dolly\n\n// array of object\nvar users = [\n    {name: \nDolly\n},\n    {name: \nMolly\n}\n]\nsprintf(\nHello %(users[0].name)s and %(users[1].name)s\n, {users: users})\n# Hello Dolly and Molly", 
+            "title": "String"
+        }, 
+        {
+            "location": "/data_string/#sprintf", 
+            "text": "In  index.html  script src= cdnjs.cloudflare.com/ajax/libs/sprintf/1.0.3/sprintf.js /   In  script.js  // arguments\nsprintf( %1$s %2$s ,  hello ,  sprintf )\n# hello sprintf\n\n// object\nvar user = {\n    name:  Dolly \n}\nsprintf( Hello %(name)s , user)\n# Hello Dolly\n\n// array of object\nvar users = [\n    {name:  Dolly },\n    {name:  Molly }\n]\nsprintf( Hello %(users[0].name)s and %(users[1].name)s , {users: users})\n# Hello Dolly and Molly", 
+            "title": "sprintf"
+        }, 
+        {
+            "location": "/data_time/", 
+            "text": "moment.js \n1\n\n\nCurrent Time\n\n\nmoment().format('MMMM Do YYYY, h:mm:ss a');\n\n\n\n\n\n\n\n\n\n\n\n\nMoment.js", 
+            "title": "Time"
+        }, 
+        {
+            "location": "/data_time/#current-time", 
+            "text": "moment().format('MMMM Do YYYY, h:mm:ss a');      Moment.js", 
+            "title": "Current Time"
+        }, 
+        {
+            "location": "/data_object/", 
+            "text": "Convert dict to object \n1\n\n\nclass Struct:\n    def __init__(self, **entries):\n        self.__dict__.update(entries)\n\n\n\n\nThen, you can use\n\n\n args = {'a': 1, 'b': 2}\n\n s = Struct(**args)\n\n s\n\n __main__.Struct instance at 0x01D6A738 \n\n\n s.a\n1\n\n s.b\n2\n\n\n\n\n\n\n\n\n\n\n\n\nstackoverflow, Convert Python dict to object?", 
+            "title": "Object"
+        }, 
+        {
+            "location": "/oop/", 
+            "text": "1. Classes and Objects\n\n\nConstructor\n\n\nfunction Ball(position){\n    this.position = position;\n    this.display = function(){\n        console.log(this.position[0], \n, \n, this.position[1]);\n    }\n}\n\nball = new Ball([2, 3]);\nball.display();\n\n\n\n\n2. Inheritance\n\n\nPerson = function (name, birthday, job) {\n  this.name = name;\n  this.birthday = birthday;\n  this.job = job;\n};\n\nPerson.prototype.display = function () {\n  console.log(this.name, \n\\n\n);\n  console.log(this.birthday, \n\\n\n);\n  console.log(this.job, \n\\n\n);\n};\n\nPolitician = function (name, birthday) {\n  Person.call(this, name, birthday, \nPolitician\n);\n};\nPolitician.prototype = Object.create(Person.prototype);\nPolitician.prototype.constructor = Politician;\n\nvar person1 = new Person(\nBarack Obama\n, \n04/08/1961\n, \nPolitician\n);\nvar person2 = new Politician(\nDavid Cameron\n, \n09/10/1966\n);\nperson1.display();\nperson2.display();\n\n\n\n\n\n[1]: \nIntroduction to Object-Oriented JavaScript\n\n[2]: \nHow to call parent constructor?", 
+            "title": "OOP"
+        }, 
+        {
+            "location": "/oop/#1-classes-and-objects", 
+            "text": "", 
+            "title": "1. Classes and Objects"
+        }, 
+        {
+            "location": "/oop/#constructor", 
+            "text": "function Ball(position){\n    this.position = position;\n    this.display = function(){\n        console.log(this.position[0],  ,  , this.position[1]);\n    }\n}\n\nball = new Ball([2, 3]);\nball.display();", 
+            "title": "Constructor"
+        }, 
+        {
+            "location": "/oop/#2-inheritance", 
+            "text": "Person = function (name, birthday, job) {\n  this.name = name;\n  this.birthday = birthday;\n  this.job = job;\n};\n\nPerson.prototype.display = function () {\n  console.log(this.name,  \\n );\n  console.log(this.birthday,  \\n );\n  console.log(this.job,  \\n );\n};\n\nPolitician = function (name, birthday) {\n  Person.call(this, name, birthday,  Politician );\n};\nPolitician.prototype = Object.create(Person.prototype);\nPolitician.prototype.constructor = Politician;\n\nvar person1 = new Person( Barack Obama ,  04/08/1961 ,  Politician );\nvar person2 = new Politician( David Cameron ,  09/10/1966 );\nperson1.display();\nperson2.display();  [1]:  Introduction to Object-Oriented JavaScript \n[2]:  How to call parent constructor?", 
+            "title": "2. Inheritance"
+        }, 
+        {
+            "location": "/networking/", 
+            "text": "REST\n\n\nPOST\n\n\n[code lang=\"javascript\"]\n$.ajax({\n  type: \"POST\",\n  url: \"http://service.com/items\",\n  data: JSON.stringify({\"name\": \"new item\"}),\n  contentType: 'application/json'\n}).done(function (data) {\n  console.log(data)\n}).fail(function () {\n});\n[/code]", 
+            "title": "Networking"
+        }, 
+        {
+            "location": "/networking/#rest", 
+            "text": "", 
+            "title": "REST"
+        }, 
+        {
+            "location": "/networking/#post", 
+            "text": "[code lang=\"javascript\"]\n$.ajax({\n  type: \"POST\",\n  url: \"http://service.com/items\",\n  data: JSON.stringify({\"name\": \"new item\"}),\n  contentType: 'application/json'\n}).done(function (data) {\n  console.log(data)\n}).fail(function () {\n});\n[/code]", 
+            "title": "POST"
+        }, 
+        {
+            "location": "/logging/", 
+            "text": "Javascript Logging\n\n\nHaving a fancy JavaScript debugger is great, but sometimes the fastest way to find bugs is just to dump as much\ninformation to the \nconsole\n as you can.\n\n\nconsole.log\nconsole.assert\nconsole.error", 
+            "title": "Logging"
+        }, 
+        {
+            "location": "/logging/#javascript-logging", 
+            "text": "Having a fancy JavaScript debugger is great, but sometimes the fastest way to find bugs is just to dump as much\ninformation to the  console  as you can.  console.log\nconsole.assert\nconsole.error", 
+            "title": "Javascript Logging"
+        }, 
+        {
+            "location": "/documentation/", 
+            "text": "Components\n\n\njsdoc\n (with \ndocdash\n template)\n\n\nJSDoc is an API documentation generator for JavaScript, similar to JavaDoc or PHPDoc. You add documentation comments directly to your source code, right along side the code itself. The JSDoc Tool will scan your source code, and generate a complete HTML documentation website for you.\n\n\ngulp\n, \nPyCharm\n\n\nUsage\n\n\nStep 1. Install \ngulp-jsdoc\n\n\nnpm install --save-dev gulp gulp-jsdoc docdash\n\n\n\n\nStep 2. Create \ndocumentation\n task\n\n\nCreate \ndocumentation\n task in \ngulpfile.js\n file\n\n\nvar template = {\n  \npath\n: \n./node_modules/docdash\n\n};\n\ngulp.task('docs', function(){\n  return gulp.src(\n./src/*.js\n)\n    .pipe(jsdoc('./docs', template));\n});\n\n\n\n\nStep 3. Refresh \nGulp\n tasks\n\n\nIn pycharm, click to refresh button in \ngulp\n window.\n\n\nStep 4. Add comment to your code\n\n\nAdd comment to your code, You can see an \nexample: should.js\n\n\n/**\n * Simple utility function for a bit more easier should assertion\n * extension\n * @param {Function} f So called plugin function. It should accept\n * 2 arguments: `should` function and `Assertion` constructor\n * @memberOf should\n * @returns {Function} Returns `should` function\n * @static\n * @example\n *\n * should.use(function(should, Assertion) {\n *   Assertion.add('asset', function() {\n *      this.params = { operator: 'to be asset' };\n *\n *      this.obj.should.have.property('id').which.is.a.Number();\n *      this.obj.should.have.property('path');\n *  })\n * })\n */\nshould.use = function(f) {\n  f(should, should.Assertion);\n  return this;\n};\n\n\n\n\n\nTypes\n: \nboolean\n, \nstring\n, \nnumber\n, \nArray\n (\nsee more\n)\n\n\nStep 5. Run \ndocs\n task\n\n\nIn pycharm, click to \ndocs\n task in \ngulp\n window.", 
+            "title": "Documentation"
+        }, 
+        {
+            "location": "/documentation/#components", 
+            "text": "jsdoc  (with  docdash  template)  JSDoc is an API documentation generator for JavaScript, similar to JavaDoc or PHPDoc. You add documentation comments directly to your source code, right along side the code itself. The JSDoc Tool will scan your source code, and generate a complete HTML documentation website for you.  gulp ,  PyCharm", 
+            "title": "Components"
+        }, 
+        {
+            "location": "/documentation/#usage", 
+            "text": "", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/documentation/#step-1-install-gulp-jsdoc", 
+            "text": "npm install --save-dev gulp gulp-jsdoc docdash", 
+            "title": "Step 1. Install gulp-jsdoc"
+        }, 
+        {
+            "location": "/documentation/#step-2-create-documentation-task", 
+            "text": "Create  documentation  task in  gulpfile.js  file  var template = {\n   path :  ./node_modules/docdash \n};\n\ngulp.task('docs', function(){\n  return gulp.src( ./src/*.js )\n    .pipe(jsdoc('./docs', template));\n});", 
+            "title": "Step 2. Create documentation task"
+        }, 
+        {
+            "location": "/documentation/#step-3-refresh-gulp-tasks", 
+            "text": "In pycharm, click to refresh button in  gulp  window.", 
+            "title": "Step 3. Refresh Gulp tasks"
+        }, 
+        {
+            "location": "/documentation/#step-4-add-comment-to-your-code", 
+            "text": "Add comment to your code, You can see an  example: should.js  /**\n * Simple utility function for a bit more easier should assertion\n * extension\n * @param {Function} f So called plugin function. It should accept\n * 2 arguments: `should` function and `Assertion` constructor\n * @memberOf should\n * @returns {Function} Returns `should` function\n * @static\n * @example\n *\n * should.use(function(should, Assertion) {\n *   Assertion.add('asset', function() {\n *      this.params = { operator: 'to be asset' };\n *\n *      this.obj.should.have.property('id').which.is.a.Number();\n *      this.obj.should.have.property('path');\n *  })\n * })\n */\nshould.use = function(f) {\n  f(should, should.Assertion);\n  return this;\n};  Types :  boolean ,  string ,  number ,  Array  ( see more )", 
+            "title": "Step 4. Add comment to your code"
+        }, 
+        {
+            "location": "/documentation/#step-5-run-docs-task", 
+            "text": "In pycharm, click to  docs  task in  gulp  window.", 
+            "title": "Step 5. Run docs task"
+        }, 
+        {
+            "location": "/testing/", 
+            "text": "Mocha\n\n\nMocha is a feature-rich JavaScript test framework running on Node.js and the browser, making asynchronous testing simple and fun. Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases.\n\n\nInstallation\n\n\nbower install -D mocha chai\n\n\n\n\nUsage\n\n\nStep 1. Make \nindex.html\n\n\n!DOCTYPE html\n\n\nhtml\n\n\nhead\n\n  \nmeta charset=\nutf-8\n\n  \ntitle\nTests\n/title\n\n  \nlink rel=\nstylesheet\n media=\nall\n href=\nmocha.css\n\n\n/head\n\n\nbody\n\n  \ndiv id=\nmocha\n/div\n\n  \nscript src=\nmocha.js\n/script\n\n  \nscript src=\nchai.js\n/script\n\n  \nscript src=\nfunctions.js\n/script\n\n  \nscript\nmocha.setup('bdd'); chai.should();\n/script\n\n  \nscript src=\ntests.js\n/script\n\n  \nscript\nmocha.run();\n/script\n\n\n/body\n\n\n/html\n\n\n\n\n\nStep 2. Edit \nfunctions.js\n\n\nfunction sum(a, b){\n  return a + b;\n}\n\nfunction asynchronusSum(a, b){\n  return new Promise(function(fulfill, reject){\n    fulfill(a + b);\n  });\n}\n\n\n\n\nStep 3. Edit \ntests.js\n\n\ndescribe('Calculator', function() {\n  this.timeout(5000);\n  describe('#sum()', function() {\n    it('should return sum of two number', function() {\n      sum(2, 3).should.equal(5)\n    });\n  });\n\n  describe('#asynchronusSum()', function() {\n    it('should return sum of two number', function(done) {\n      asynchronusSum(2, 3).then(function(output){\n          output.should.equal(5);\n          done();\n      })\n    });\n  });\n});", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/testing/#mocha", 
+            "text": "Mocha is a feature-rich JavaScript test framework running on Node.js and the browser, making asynchronous testing simple and fun. Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases.", 
+            "title": "Mocha"
+        }, 
+        {
+            "location": "/testing/#installation", 
+            "text": "bower install -D mocha chai", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/testing/#usage", 
+            "text": "Step 1. Make  index.html  !DOCTYPE html  html  head \n   meta charset= utf-8 \n   title Tests /title \n   link rel= stylesheet  media= all  href= mocha.css  /head  body \n   div id= mocha /div \n   script src= mocha.js /script \n   script src= chai.js /script \n   script src= functions.js /script \n   script mocha.setup('bdd'); chai.should(); /script \n   script src= tests.js /script \n   script mocha.run(); /script  /body  /html   Step 2. Edit  functions.js  function sum(a, b){\n  return a + b;\n}\n\nfunction asynchronusSum(a, b){\n  return new Promise(function(fulfill, reject){\n    fulfill(a + b);\n  });\n}  Step 3. Edit  tests.js  describe('Calculator', function() {\n  this.timeout(5000);\n  describe('#sum()', function() {\n    it('should return sum of two number', function() {\n      sum(2, 3).should.equal(5)\n    });\n  });\n\n  describe('#asynchronusSum()', function() {\n    it('should return sum of two number', function(done) {\n      asynchronusSum(2, 3).then(function(output){\n          output.should.equal(5);\n          done();\n      })\n    });\n  });\n});", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/package_manager/", 
+            "text": "Bower\n\n\nA package manager for the web\n\n\nWeb sites are made of lots of things \u2014 frameworks, libraries, assets, utilities, and rainbows. Bower manages all these things for you.\n\n\nBower works by fetching and installing packages from all over, taking care of hunting, finding, downloading, and saving the stuff you\u2019re looking for. Bower keeps track of these packages in a manifest file, bower.json. How you use packages is up to you. Bower provides hooks to facilitate using packages in your tools and workflows.\n\n\nBower is optimized for the front-end. Bower uses a flat dependency tree, requiring only one version for each package, reducing page load to a minimum.\n\n\nhttp://bower.io/\n\n\n[code]\nbower install jquery underscore moment sprintf -S\n[/code]\n\n\nHTML \nbower based\n\n\nscript src=\n./bower_components/jquery/dist/jquery.js\n/script\n\n\nscript src=\n./bower_components/moment/moment.js\n/script\n\n\nscript src=\n./bower_components/underscore/underscore.js\n/script\n\n\nscript src=\n./bower_components/sprintf/src/sprintf.js\n/script\n\n\n\n\n\nHTML \ncdn based\n\n\nscript src=\n//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js\n/script\n\n\nscript src=\n//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js\n/script\n\n\nscript src=\n//cdnjs.cloudflare.com/ajax/libs/sprintf/1.0.3/sprintf.js\n/script", 
+            "title": "Package Manager"
+        }, 
+        {
+            "location": "/package_manager/#bower", 
+            "text": "A package manager for the web  Web sites are made of lots of things \u2014 frameworks, libraries, assets, utilities, and rainbows. Bower manages all these things for you.  Bower works by fetching and installing packages from all over, taking care of hunting, finding, downloading, and saving the stuff you\u2019re looking for. Bower keeps track of these packages in a manifest file, bower.json. How you use packages is up to you. Bower provides hooks to facilitate using packages in your tools and workflows.  Bower is optimized for the front-end. Bower uses a flat dependency tree, requiring only one version for each package, reducing page load to a minimum.  http://bower.io/  [code]\nbower install jquery underscore moment sprintf -S\n[/code]  HTML  bower based  script src= ./bower_components/jquery/dist/jquery.js /script  script src= ./bower_components/moment/moment.js /script  script src= ./bower_components/underscore/underscore.js /script  script src= ./bower_components/sprintf/src/sprintf.js /script   HTML  cdn based  script src= //cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js /script  script src= //cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js /script  script src= //cdnjs.cloudflare.com/ajax/libs/sprintf/1.0.3/sprintf.js /script", 
+            "title": "Bower"
+        }, 
+        {
+            "location": "/build_tool/", 
+            "text": "Gulp\n\n\nAutomate and enhance your workflow\n\n\nHere's some of the sweet stuff you try out with this repo.\n\n\n\n    \nCompile CoffeeScript (with source maps!)\n\n    \nCompile Handlebars Templates\n\n    \nCompile SASS with Compass\n\n    \nLiveReload\n\n    \nrequire non-CommonJS code, with dependencies\n\n    \nSet up module aliases\n\n    \nRun a static Node server (with logging)\n\n    \nPop open your app in a Browser\n\n    \nReport Errors through Notification Center\n\n    \nImage processing\n\n\n\n\n\nInstallation\n\n\nnpm install -S gulp gulp-concat\n\n\n\n\nUsage\n\n\nWatch\n\n\nvar gulp = require('gulp');\nvar concat = require('gulp-concat');\nvar uglify = require('gulp-uglify');\nvar jsdoc = require(\ngulp-jsdoc\n);\n\nvar third_parties = [\n  \nbower_components/jquery/dist/jquery.js\n,\n  \nbower_components/bootstrap/dist/js/bootstrap.js\n,\n  \nbower_components/underscore/underscore.js\n,\n  \nbower_components/ring/ring.js\n,\n  \nbower_components/moment/moment.js\n,\n  \nbower_components/sprintf/src/sprintf.js\n,\n  \nbower_components/uri.js/src/URI.js\n,\n  \nbower_components/run/run.js\n\n];\n\nvar modules = [\n  \nmodules/your_script.js\n\n];\n\ngulp.watch(third_parties, ['js_thirdparty']);\ngulp.watch(modules, ['js_modules']);\n\ngulp.task('js_thirdparty', function () {\n  return gulp\n    .src(third_parties)\n    .pipe(concat('third_party.uglify.js'))\n    .pipe(uglify())\n    .pipe(gulp.dest('./scripts'));\n});\n\ngulp.task('js_modules', function () {\n  return gulp\n    .src(modules)\n    .pipe(concat('modules.uglify.js'))\n    //.pipe(uglify())\n    .pipe(gulp.dest('./scripts'));\n});\n\ngulp.task('documentation', function () {\n  return gulp\n    .src(\n./modules/*/*.js\n)\n    .pipe(jsdoc('./documentation'));\n});\n\ngulp.task('default', ['js_thirdparty', 'js_modules']);\n\n\n\n\nhttp://gulpjs.com/\n\n\nDeprecated\n\n\ngrunt", 
+            "title": "Build Tool"
+        }, 
+        {
+            "location": "/build_tool/#installation", 
+            "text": "npm install -S gulp gulp-concat", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/build_tool/#usage", 
+            "text": "Watch  var gulp = require('gulp');\nvar concat = require('gulp-concat');\nvar uglify = require('gulp-uglify');\nvar jsdoc = require( gulp-jsdoc );\n\nvar third_parties = [\n   bower_components/jquery/dist/jquery.js ,\n   bower_components/bootstrap/dist/js/bootstrap.js ,\n   bower_components/underscore/underscore.js ,\n   bower_components/ring/ring.js ,\n   bower_components/moment/moment.js ,\n   bower_components/sprintf/src/sprintf.js ,\n   bower_components/uri.js/src/URI.js ,\n   bower_components/run/run.js \n];\n\nvar modules = [\n   modules/your_script.js \n];\n\ngulp.watch(third_parties, ['js_thirdparty']);\ngulp.watch(modules, ['js_modules']);\n\ngulp.task('js_thirdparty', function () {\n  return gulp\n    .src(third_parties)\n    .pipe(concat('third_party.uglify.js'))\n    .pipe(uglify())\n    .pipe(gulp.dest('./scripts'));\n});\n\ngulp.task('js_modules', function () {\n  return gulp\n    .src(modules)\n    .pipe(concat('modules.uglify.js'))\n    //.pipe(uglify())\n    .pipe(gulp.dest('./scripts'));\n});\n\ngulp.task('documentation', function () {\n  return gulp\n    .src( ./modules/*/*.js )\n    .pipe(jsdoc('./documentation'));\n});\n\ngulp.task('default', ['js_thirdparty', 'js_modules']);  http://gulpjs.com/", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/build_tool/#deprecated", 
+            "text": "grunt", 
+            "title": "Deprecated"
+        }, 
+        {
+            "location": "/make_module/", 
+            "text": "Make Module\n\n\nsample modules: \nunderscore\n, \nmomentjs\n\n\nFolder Structure\n\n\n|- docs\n|- test\n|- src\n|   |-- your_module.js\n|- .gitignore\n|- bower.json", 
+            "title": "Make Module"
+        }, 
+        {
+            "location": "/make_module/#make-module", 
+            "text": "sample modules:  underscore ,  momentjs", 
+            "title": "Make Module"
+        }, 
+        {
+            "location": "/make_module/#folder-structure", 
+            "text": "|- docs\n|- test\n|- src\n|   |-- your_module.js\n|- .gitignore\n|- bower.json", 
+            "title": "Folder Structure"
+        }
+    ]
+}
