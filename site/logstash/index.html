@@ -7,14 +7,14 @@
         
         
         
-        <link rel="shortcut icon" href="./img/favicon.ico">
+        <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>BigData</title>
+	<title>Logstash - BigData</title>
 
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="./css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -25,7 +25,7 @@
         
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -43,7 +43,7 @@
             
 
             <!-- Main title -->
-            <a class="navbar-brand" href=".">BigData</a>
+            <a class="navbar-brand" href="..">BigData</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -53,67 +53,67 @@
                 <ul class="nav navbar-nav">
                 
                 
-                    <li class="active">
-                        <a href=".">Home</a>
+                    <li >
+                        <a href="..">Home</a>
                     </li>
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Architecture <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="ambari/">Apache Ambari</a>
+    <a href="../ambari/">Apache Ambari</a>
 </li>
 
                         
                             
 <li >
-    <a href="nutch/">Apache Nutch</a>
+    <a href="../nutch/">Apache Nutch</a>
 </li>
 
                         
                             
 <li >
-    <a href="spark/">Apache Spark</a>
+    <a href="../spark/">Apache Spark</a>
 </li>
 
                         
                             
 <li >
-    <a href="hbase/">Apache HBase</a>
+    <a href="../hbase/">Apache HBase</a>
 </li>
 
                         
                             
 <li >
-    <a href="hdfs/">HDFS</a>
+    <a href="../hdfs/">HDFS</a>
 </li>
 
                         
                             
 <li >
-    <a href="kibana/">Kibana</a>
+    <a href="../kibana/">Kibana</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Logstash</a>
 </li>
 
                         
                             
 <li >
-    <a href="logstash/">Logstash</a>
+    <a href="../neo4j/">Neo4J</a>
 </li>
 
                         
                             
 <li >
-    <a href="neo4j/">Neo4J</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="elasticsearch/">Elasticsearch</a>
+    <a href="../elasticsearch/">Elasticsearch</a>
 </li>
 
                         
@@ -131,13 +131,13 @@
                     </a>
                 </li>
                 
-                    <li class="disabled">
-                        <a rel="next" >
+                    <li >
+                        <a rel="next" href="../kibana/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="ambari/">
+                        <a rel="prev" href="../neo4j/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -153,69 +153,15 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#big-data-qa">Big Data Q&amp;A</a></li>
+        <li class="main active"><a href="#logstash">Logstash</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="big-data-qa">Big Data Q&amp;A</h1>
-<h3>1. What is "Big Data"? <sup id="fnref-888-1"><a href="#fn-888-1" rel="footnote">1</a></sup></h3>
-
-<p>[embed]https://www.youtube.com/watch?v=TzxmjbL-i4Y[/embed]</p>
-<h3>2. How big is big data? <sup id="fnref-888-2"><a href="#fn-888-2" rel="footnote">2</a></sup></h3>
-
-<p><img class="alignnone" src="http://blogs.intel.com/scoop/files/2012/03/infographic_1080_logo.jpg" alt="" width="1495" height="1080" /></p>
-<h3>3. How much data is "Big Data"? <sup id="fnref-888-3"><a href="#fn-888-3" rel="footnote">3</a></sup></h3>
-
-<p><img class="alignnone" src="http://qph.is.quoracdn.net/main-qimg-4ffd5c58b96abab86126574ac0098df6?convert_to_webp=true" alt="" /></p>
-<h3>4. What are characteristics of "Big Data"? <sup id="fnref-888-4"><a href="#fn-888-4" rel="footnote">4</a></sup></h3>
-
-<p><img class="alignnone" src="http://www-01.ibm.com/software/data/bigdata/images/4-Vs-of-big-data.jpg" alt="" /></p>
-<h3>5. What is big data ecosystem? <sup id="fnref-888-5"><a href="#fn-888-5" rel="footnote">5</a></sup></h3>
-
-<p><img class="alignnone" src="http://www.clearpeaks.com/blog/wp-content/uploads/2015/07/Image-1.png" alt="" width="1085" height="753" /></p>
-<h3>6. What is big data landscape <sup id="fnref-888-6"><a href="#fn-888-6" rel="footnote">6</a></sup></h3>
-
-<p><img class="alignnone" src="https://vladimerbotsvadze.files.wordpress.com/2015/01/037c5afd19e677283673bd583ee8d027.jpg" alt="" width="736" height="552" /></p>
-<h3>7. What are benefits of big data? <sup id="fnref-888-7"><a href="#fn-888-7" rel="footnote">7</a></sup></h3>
-
-<p><img class="alignnone" src="http://blog.galaxyweblinks.com/wp-content/uploads/2014/11/industries-using-big-data1-768x1024.png" alt="" /></p>
-<div class="footnotes">
-<hr />
-<ol>
-
-<li id="fn-888-1">
-https://www.youtube.com/watch?v=TzxmjbL-i4Y&#160;<a href="#fnref-888-1" rev="footnote">&#8617;</a>
-</li>
-
-<li id="fn-888-2">
-http://scoop.intel.com/what-happens-in-an-internet-minute/&#160;<a href="#fnref-888-2" rev="footnote">&#8617;</a>
-</li>
-
-<li id="fn-888-3">
-http://www.quora.com/How-much-data-is-Big-Data&#160;<a href="#fnref-888-3" rev="footnote">&#8617;</a>
-</li>
-
-<li id="fn-888-4">
-https://en.wikipedia.org/wiki/Big_data#Characteristics&#160;<a href="#fnref-888-4" rev="footnote">&#8617;</a>
-</li>
-
-<li id="fn-888-5">
-http://www.clearpeaks.com/blog/big-data/big-data-ecosystem-spark-and-tableau&#160;<a href="#fnref-888-5" rev="footnote">&#8617;</a>
-</li>
-
-<li id="fn-888-6">
-https://vladimerbotsvadze.wordpress.com/2015/01/28/the-big-data-landscape-technology-businessintelligence-analytics/&#160;<a href="#fnref-888-6" rev="footnote">&#8617;</a>
-</li>
-
-<li id="fn-888-7">
-http://blog.galaxyweblinks.com/big-data-with-bigger-benefits/&#160;<a href="#fnref-888-7" rev="footnote">&#8617;</a>
-</li>
-
-</ol>
-</div></div>
+<h1 id="logstash">Logstash</h1>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-use-logstash-and-kibana-to-centralize-logs-on-centos-6">https://www.digitalocean.com/community/tutorials/how-to-use-logstash-and-kibana-to-centralize-logs-on-centos-6</a></p></div>
             
         </div>
 
@@ -225,12 +171,12 @@ http://blog.galaxyweblinks.com/big-data-with-bigger-benefits/&#160;<a href="#fnr
             <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
 
-        <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/bootstrap-3.0.3.min.js"></script>
-        <script src="./js/highlight.pack.js"></script>
-        <script>var base_url = '.';</script>
-        <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
-        <script src="./js/base.js"></script>
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
             <div class="modal-dialog">
@@ -259,8 +205,3 @@ http://blog.galaxyweblinks.com/big-data-with-bigger-benefits/&#160;<a href="#fnr
 
     </body>
 </html>
-
-<!--
-MkDocs version : 0.15.3
-Build Date UTC : 2016-07-01 08:07:12.439000
--->

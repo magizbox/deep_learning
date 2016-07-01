@@ -12,75 +12,55 @@
     
         
     <url>
-     <loc>None/101/</loc>
+     <loc>None/ambari/</loc>
      <lastmod>2016-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/201/</loc>
+     <loc>None/nutch/</loc>
      <lastmod>2016-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None</loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/oop/</loc>
+     <loc>None/spark/</loc>
      <lastmod>2016-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/networking/</loc>
-     <lastmod>2016-07-01</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>None/logging/</loc>
+     <loc>None/hbase/</loc>
      <lastmod>2016-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/documentation/</loc>
+     <loc>None/hdfs/</loc>
      <lastmod>2016-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/testing/</loc>
-     <lastmod>2016-07-01</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>None/package_manager/</loc>
+     <loc>None/kibana/</loc>
      <lastmod>2016-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/build_tool/</loc>
+     <loc>None/logstash/</loc>
      <lastmod>2016-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/make_module/</loc>
+     <loc>None/neo4j/</loc>
+     <lastmod>2016-07-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/elasticsearch/</loc>
      <lastmod>2016-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url>

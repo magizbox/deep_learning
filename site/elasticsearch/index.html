@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+	<title>Elasticsearch - BigData</title>
+
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">BigData</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Architecture <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../ambari/">Apache Ambari</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../nutch/">Apache Nutch</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../spark/">Apache Spark</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../hbase/">Apache HBase</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../hdfs/">HDFS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../kibana/">Kibana</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../logstash/">Logstash</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../neo4j/">Neo4J</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Elasticsearch</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../neo4j/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#elasticsearch">Elasticsearch</a></li>
+        
+    
+        <li class="main "><a href="#elasticsearch-tutorial-series-1-metric-aggregations-with-social-network-data">Elasticsearch tutorial series 1: Metric Aggregations with Social Network Data</a></li>
+        
+            <li><a href="#avg-max-min-sum-count-aggregation">Avg, Max, Min, Sum, Count Aggregation</a></li>
+        
+            <li><a href="#cardinality-aggregation">Cardinality Aggregation</a></li>
+        
+            <li><a href="#stats-aggregation">Stats Aggregation</a></li>
+        
+            <li><a href="#extended-stats-aggregation">Extended Stats Aggregation</a></li>
+        
+            <li><a href="#percentiles-aggregation">Percentiles Aggregation</a></li>
+        
+            <li><a href="#percentile-ranks-aggregation">Percentile Ranks Aggregation</a></li>
+        
+            <li><a href="#top-hits-aggregation">Top hits Aggregation</a></li>
+        
+            <li><a href="#an-aggregation">An Aggregation</a></li>
+        
+    
+        <li class="main "><a href="#config">Config</a></li>
+        
+    
+        <li class="main "><a href="#docker">Docker</a></li>
+        
+    
+        <li class="main "><a href="#elasticsearch-search-ignore-accents">Elasticsearch: Search Ignore Accents</a></li>
+        
+            <li><a href="#step-1-install-icu-plugin-3">Step 1: Install ICU-Plugin 3</a></li>
+        
+            <li><a href="#step-2-create-an-analyzer-setting">Step 2: Create an analyzer setting:</a></li>
+        
+            <li><a href="#step-3-create-your-index-create-a-field-with-type-string-and-analyzer-is-vnanalysis-you-have-created">Step 3: Create your index, create a field with type string and analyzer is vnanalysis you have created</a></li>
+        
+            <li><a href="#step-4-search-with-sense">Step 4: Search with sense</a></li>
+        
+    
+        <li class="main "><a href="#es-import-csv-to-elasticsearch">ES: Import CSV to Elasticsearch</a></li>
+        
+    
+        <li class="main "><a href="#install-lastest-elasticdump-with-nvm">Install lastest Elasticdump with NVM</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="elasticsearch">Elasticsearch</h1>
+<p><img src="http://substantial.com/assets/images/blog/2013/01/elasticsearch.png" alt="" /></p>
+<blockquote>
+  Elasticsearch is a <strong>search server</strong> based on Lucene. It provides a distributed, multitenant-capable full-text search engine with a RESTful web interface and schema-free JSON documents. Elasticsearch is developed in Java and is released as open source under the terms of the Apache License. Elasticsearch is the second most popular enterprise search engine
+</blockquote>
+
+<h3>1. Basic Concenpts</h3>
+
+<table>
+<thead>
+<tr>
+<th>Relational Database</th>
+<th>Elasticsearch</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Database</td>
+<td>Index</td>
+</tr>
+
+<tr>
+<td>Table</td>
+<td>Type</td>
+</tr>
+
+<tr>
+<td>Row</td>
+<td>Document</td>
+</tr>
+
+<tr>
+<td>Column</td>
+<td>Field</td>
+</tr>
+
+<tr>
+<td>Schema</td>
+<td>Mapping</td>
+</tr>
+</tbody>
+</table>
+
+<h3>2. Index &amp; Query</h3>
+
+<h4>Get all indices</h4>
+
+<blockquote>
+  /_stats
+</blockquote>
+
+<h3>Search API <sup id="fnref-1210-1"><a href="#fn-1210-1" rel="footnote">1</a></sup></h3>
+
+<h4>Search All</h4>
+
+<blockquote>
+  /bank/_search?q=*
+</blockquote>
+
+<p><code>hits.hits</code> – actual array of search results (defaults to first 10 documents)</p>
+<h4>Query Language</h4>
+
+<p>elasticsearch provides a full <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html">Query DSL</a> based on JSON to define queries.</p>
+<blockquote>
+  curl -XPOST /bank/_search
+</blockquote>
+
+<p>[code language="javascript"]
+// match all, limit 10 offset 10
+{
+  "query": { "match_all": {} },
+  "from": 10,
+  "size": 10
+}</p>
+<p>// select fields
+{
+  "query": { "match_all": {} },
+  _source: ["account_number", "balance"]
+  "size": 10
+}</p>
+<p>// where account equals 20
+{
+  "query": { "match": { "account_number": 20 } }
+}
+[/code]</p>
+<p><strong>Filter</strong></p>
+<p>[code]
+curl -XPOST elastic:9200/index/type/_search -d '
+{
+  "query" : {
+    "filtered" :
+    {
+      "query" : { "term" : { "feature" : 1 } } ,
+      "filter" : {
+        "and" : [
+          {
+            "range": {
+              "_timestamp": {
+                "from": 1441964671000,
+                "to": 1441964672000
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+[/code]</p>
+<p><strong>Sort</strong></p>
+<p>[code]
+curl -XPOST elastic:9200/index/type/_search -d '
+{
+  "query" : {
+    "filtered" :
+    {
+      "query" : { "term" : { "feature" : 1 } } ,
+      "filter" : {
+        "and" : [
+          {
+            "range": {
+              "_timestamp": {
+                "from": 1441964671000,
+                "to": 1441964672000
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+[/code]
+<h3>3. Mapping</h3></p>
+<h4>Timestamp <sup id="fnref-1210-2"><a href="#fn-1210-2" rel="footnote">2</a></sup></h4>
+
+<p>Enable and store timestamp</p>
+<blockquote>
+  curl -XPOST localhost:9200/test
+</blockquote>
+
+<p>[code]
+{
+"mappings" : {
+    "<em>default</em>":{
+        "_timestamp" : {
+            "enabled" : true,
+            "store" : true
+        }
+    }
+  }
+}'
+[/code]</p>
+<h3>Relationships Management <sup id="fnref-1210-6"><a href="#fn-1210-6" rel="footnote">3</a></sup> <sup id="fnref-1210-7"><a href="#fn-1210-7" rel="footnote">4</a></sup></h3>
+
+<p><strong>Inner Object</strong></p>
+<ul>
+<li>👍 Easy, fast, performant</li>
+<li>👎 No need for special queries</li>
+<li>☛ Only applicable when one-to-one relationships are maintained</li>
+</ul>
+
+<p><strong>Nested</strong></p>
+<ul>
+<li>👍 Nested docs are stored in the same Lucene block as each other, which helps read/query  performance. Reading a nested doc is faster than the equivalent parent/child.</li>
+<li>👎 Updating a single field in a nested document (parent or nested children) forces ES to reindex the entire nested document. This can be very expensive for large nested docs</li>
+<li>👎 “Cross referencing” nested documents is impossible</li>
+<li>☛ Best suited for data that does not change frequently</li>
+</ul>
+
+<p><strong>Parent/Child</strong></p>
+<ul>
+<li>👍 Updating a child doc does not affect the parent or any other children, which can potentially save a lot of indexing on large docs</li>
+<li>👎 Children are stored separately from the parent, but are routed to the same shard. So parent/children are slightly less performance on read/query than nested</li>
+<li>👎 Parent/child mappings have a bit extra memory overhead, since ES maintains a “join” list in memory</li>
+<li>👎 Sorting/scoring can be difficult with Parent/Child since the Has Child/Has Parent operations can be opaque at times</li>
+</ul>
+
+<p><strong>Denormalization</strong></p>
+<ul>
+<li>👍 You get to manage all the relations yourself!</li>
+<li>👎 Most flexible, most administrative overhead</li>
+<li>☛ May be more or less performant depending on your setup</li>
+</ul>
+
+<h3>4. Backup</h3>
+
+<h4>Elastic Dump <sup id="fnref-1210-3"><a href="#fn-1210-3" rel="footnote">5</a></sup></h4>
+
+<p>Tools for moving and saving indicies.</p>
+<p>[code]
+bin/elasticdump
+  --input=http://localhost:9200/index_1
+  --output=http://localhost:9200/index_1_backup
+  --type=data
+  --scrollTime=100
+[/code]</p>
+<h4>Alias <sup id="fnref-1210-5"><a href="#fn-1210-5" rel="footnote">6</a></sup></h4>
+
+<p>[code]
+curl -XPOST 'http://localhost:9200/_aliases' -d '
+{
+    &quot;actions&quot; : [
+        { &quot;remove&quot; : { &quot;index&quot; : &quot;test1&quot;, &quot;alias&quot; : &quot;alias1&quot; } },
+        { &quot;add&quot; : { &quot;index&quot; : &quot;test1&quot;, &quot;alias&quot; : &quot;alias2&quot; } }
+    ]
+}'
+[/code]</p>
+<h3>5. Module Scripting <sup id="fnref-1210-4"><a href="#fn-1210-4" rel="footnote">7</a></sup></h3>
+
+<h3>Ranking</h3>
+
+<p><a href="http://db-engines.com/en/ranking/search+engine">Rank #2 from DB-Engines Ranking of Search Engines</a></p>
+<div class="footnotes">
+<hr />
+<ol>
+
+<li id="fn-1210-1">
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/_the_search_api.html">The Search API</a>&#160;<a href="#fnref-1210-1" rev="footnote">&#8617;</a>
+</li>
+
+<li id="fn-1210-2">
+http://stackoverflow.com/a/17146144/772391&#160;<a href="#fnref-1210-2" rev="footnote">&#8617;</a>
+</li>
+
+<li id="fn-1210-6">
+<a href="http://stackoverflow.com/a/23407367/772391">http://stackoverflow.com/a/23407367/772391</a>&#160;<a href="#fnref-1210-6" rev="footnote">&#8617;</a>
+</li>
+
+<li id="fn-1210-7">
+<a href="https://www.elastic.co/guide/en/elasticsearch/guide/current/modeling-your-data.html">https://www.elastic.co/guide/en/elasticsearch/guide/current/modeling-your-data.html</a>&#160;<a href="#fnref-1210-7" rev="footnote">&#8617;</a>
+</li>
+
+<li id="fn-1210-3">
+https://github.com/taskrabbit/elasticsearch-dump&#160;<a href="#fnref-1210-3" rev="footnote">&#8617;</a>
+</li>
+
+<li id="fn-1210-5">
+https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-aliases.html&#160;<a href="#fnref-1210-5" rev="footnote">&#8617;</a>
+</li>
+
+<li id="fn-1210-4">
+https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-scripting.html&#160;<a href="#fnref-1210-4" rev="footnote">&#8617;</a>
+</li>
+
+</ol>
+</div>
+
+<h1 id="elasticsearch-tutorial-series-1-metric-aggregations-with-social-network-data">Elasticsearch tutorial series 1: Metric Aggregations with Social Network Data</h1>
+<p>Table of content</p>
+<ul>
+<li>Avg, Max, Min, Sum Aggregation</li>
+<li>Cardinality Aggregation</li>
+<li>Stats Aggregation</li>
+<li>Extended Stats Aggregation</li>
+<li>Percentile Aggregation</li>
+<li>Percentile Ranks Aggregation</li>
+<li>Top hits Aggregation</li>
+</ul>
+<h3 id="avg-max-min-sum-count-aggregation">Avg, Max, Min, Sum, Count Aggregation</h3>
+<p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-avg-aggregation.html#search-aggregations-metrics-avg-aggregation">Doc: Avg Aggregation</a>, <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-max-aggregation.html">Doc: Max Aggregation</a>, <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-min-aggregation.html">Doc: Min Aggregation</a></p>
+<p><strong>Get max, min, avg, sum, count about number of likes, shares, comments</strong></p>
+<p>Request</p>
+<p>[code lang="javascript"]
+POST /facebook_crawler/post/_search
+{"aggs":{"sum_like":{"sum":{"field":"num_like"}},"min_like":{"min":{"field":"num_like"}},"avg_like":{"avg":{"field":"num_like"}},"max_like":{"max":{"field":"num_like"}},"sum_share":{"sum":{"field":"num_share"}},"min_share":{"min":{"field":"num_share"}},"avg_share":{"avg":{"field":"num_share"}},"max_share":{"max":{"field":"num_share"}},"sum_comment":{"sum":{"field":"num_comment"}},"min_comment":{"min":{"field":"num_comment"}},"avg_comment":{"avg":{"field":"num_comment"}},"max_comment":{"max":{"field":"num_comment"}}}}
+[/code]</p>
+<p>Request</p>
+<p>[code lang="javascript"]
+{
+"aggregations": {
+      "avg_comment": {
+         "value": 75.23860589812332
+      },
+      "min_like": {
+         "value": 0
+      },
+      "avg_like": {
+         "value": 1761974365266098.2
+      },
+      "sum_like": {
+         "value": 3238508883359088600
+      },
+      "max_share": {
+         "value": 30407
+      },
+      "max_comment": {
+         "value": 11000
+      },
+      "sum_share": {
+         "value": 117844
+      },
+      "max_like": {
+         "value": 2751488761761411000
+      },
+      "avg_share": {
+         "value": 250.19957537154988
+      },
+      "sum_comment": {
+         "value": 28064
+      },
+      "min_comment": {
+         "value": 2
+      },
+      "min_share": {
+         "value": 1
+      }
+   }
+}
+[/code]</p>
+<h3 id="cardinality-aggregation">Cardinality Aggregation</h3>
+<p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-cardinality-aggregation.html#search-aggregations-metrics-cardinality-aggregation">Cardinality Aggregation</a></p>
+<p><strong>Get total of users</strong></p>
+<p>Request</p>
+<p>[code lang="javascript"]
+POST /facebook_crawler/post/_search
+{
+    "aggs" : {
+        "num_authors" : { "cardinality" : { "field" : "from.fb_id" } }
+    }
+}
+[/code]</p>
+<p>Response</p>
+<p>[code lang="javascript"]
+{
+   "aggregations": {
+      "num_authors": {
+         "value": 7385
+      }
+   }
+}
+[/code]</p>
+<h3 id="stats-aggregation"><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-stats-aggregation.html">Stats Aggregation</a></h3>
+<p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-stats-aggregation.html">Doc: Stats Aggregation</a></p>
+<p><strong>Basic Stats of like, share &amp; comment</strong></p>
+<p>Request</p>
+<p>[code lang="javascript"]
+POST /facebook_crawler/post/_search
+{
+    "aggs" : {
+        "shares" : { "stats" : { "field" : "num_share" } },
+        "likes" : { "stats" : { "field" : "num_like" } },
+        "comments" : { "stats" : { "field" : "num_comment" } }
+    }
+}
+[/code]</p>
+<p>Response</p>
+<p>[code lang="javascript"]
+{
+   "aggregations": {
+      "shares": {
+         "count": 471,
+         "min": 1,
+         "max": 30407,
+         "avg": 250.19957537154988,
+         "sum": 117844
+      },
+      "comments": {
+         "count": 373,
+         "min": 2,
+         "max": 11000,
+         "avg": 75.23860589812332,
+         "sum": 28064
+      },
+      "likes": {
+         "count": 1838,
+         "min": 0,
+         "max": 2751488761761411000,
+         "avg": 1761974365266098.2,
+         "sum": 3238508883359088600
+      }
+   }
+}
+[/code]</p>
+<h3 id="extended-stats-aggregation">Extended Stats Aggregation</h3>
+<p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-extendedstats-aggregation.html">Extended Stats Aggregation</a></p>
+<p><strong>Stats of like, share &amp; comment with more metrics, such as sum, std_deviation, std_deviation_bounds, variance</strong></p>
+<p>Request</p>
+<p>[code lang="javascript"]
+POST /facebook_crawler/post/_search
+{
+    "aggs" : {
+        "like_stats" : { "extended_stats" : { "field" : "num_like" } },
+        "share_stats" : { "extended_stats" : { "field" : "num_share" } },
+        "comment_stats" : { "extended_stats" : { "field" : "num_comment" } }
+    }
+}
+[/code]</p>
+<p>Response</p>
+<p>[code lang="javascript"]
+{
+   "aggregations": {
+      "like_stats": {
+         "count": 1838,
+         "min": 0,
+         "max": 2751488761761411000,
+         "avg": 1761974365266098.2,
+         "sum": 3238508883359088600,
+         "sum_of_squares": 7.667542671405507e+36,
+         "variance": 4.168572634260795e+33,
+         "std_deviation": 64564484310345070,
+         "std_deviation_bounds": {
+            "upper": 130890942985956240,
+            "lower": -127366994255424050
+         }
+      },
+      "share_stats": {
+         "count": 471,
+         "min": 1,
+         "max": 30407,
+         "avg": 250.19957537154988,
+         "sum": 117844,
+         "sum_of_squares": 1769467022,
+         "variance": 3694230.367812983,
+         "std_deviation": 1922.0380765773043,
+         "std_deviation_bounds": {
+            "upper": 4094.2757285261587,
+            "lower": -3593.8765777830586
+         }
+      },
+      "comment_stats": {
+         "count": 373,
+         "min": 2,
+         "max": 11000,
+         "avg": 75.23860589812332,
+         "sum": 28064,
+         "sum_of_squares": 131531392,
+         "variance": 346970.2299304962,
+         "std_deviation": 589.0417896299856,
+         "std_deviation_bounds": {
+            "upper": 1253.3221851580945,
+            "lower": -1102.844973361848
+         }
+      }
+   }
+}
+[/code]</p>
+<h3 id="percentiles-aggregation">Percentiles Aggregation</h3>
+<p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-percentile-aggregation.html">Doc: Percentiles Aggregation</a></p>
+<p><strong>Comment, Like, Share Percentiles</strong></p>
+<p>Request</p>
+<p>[code lang="javascript"]
+POST /facebook_crawler/post/_search
+{"aggs":{"like_percentiles":{"percentiles":{"field":"num_like"}},"share_percentiles":{"percentiles":{"field":"num_share"}},"comment_percentiles":{"percentiles":{"field":"num_comment"}}}}
+[/code]</p>
+<p>Response</p>
+<p>[code lang="javascript"]
+{
+"aggregations": {
+      "like_percentiles": {
+         "values": {
+            "1.0": 0,
+            "5.0": 0,
+            "25.0": 4,
+            "50.0": 18.35,
+            "75.0": 72.53579545454545,
+            "95.0": 71343.74999999999,
+            "99.0": 4338260523723.276
+         }
+      },
+      "comment_percentiles": {
+         "values": {
+            "1.0": 2,
+            "5.0": 2,
+            "25.0": 5,
+            "50.0": 10,
+            "75.0": 26,
+            "95.0": 139.39999999999998,
+            "99.0": 1000
+         }
+      },
+      "share_percentiles": {
+         "values": {
+            "1.0": 1,
+            "5.0": 1,
+            "25.0": 1,
+            "50.0": 4,
+            "75.0": 25,
+            "95.0": 251.5,
+            "99.0": 5560.3
+         }
+      }
+   }
+}
+[/code]</p>
+<p><strong>Like Percentiles with custom percents</strong></p>
+<p>Request</p>
+<p>[code lang="javascript"]
+POST /facebook_crawler/post/_search
+{
+   "aggs": {
+      "share_percentiles": {
+         "percentiles": {
+            "field": "num_share",
+            "percents": [0, 10, 80, 90, 95]
+         }
+      }
+   }
+}
+[/code]</p>
+<p>Response</p>
+<p>[code lang="javascript"]
+{
+   "aggregations": {
+      "share_percentiles": {
+         "values": {
+            "0.0": 1,
+            "10.0": 1,
+            "80.0": 37.33333333333333,
+            "90.0": 97,
+            "95.0": 251.5
+         }
+      }
+   }
+}
+[/code]</p>
+<h3 id="percentile-ranks-aggregation">Percentile Ranks Aggregation</h3>
+<p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-percentile-rank-aggregation.html">Doc: Percentile Ranks Aggregation</a></p>
+<p><strong>How like, share, comment distribute</strong></p>
+<p>Request</p>
+<p>[code lang="javascript"]
+POST /facebook_crawler/post/_search
+{
+   "aggs": {
+      "like_percentile_ranks": {
+         "percentile_ranks": {
+            "field": "num_like",
+            "values": [10, 100, 1000, 10000, 1000000, 10000000]
+         }
+      },
+      "share_percentile_ranks": {
+         "percentile_ranks": {
+            "field": "num_share",
+            "values": [10, 100, 1000, 10000, 1000000, 10000000]
+         }
+      },
+      "comment_percentile_ranks": {
+         "percentile_ranks": {
+            "field": "num_comment",
+            "values": [10, 100, 1000, 10000, 1000000, 10000000]
+         }
+      }
+   }
+}
+[/code]</p>
+<p>Response</p>
+<p>[code lang="javascript"]
+{
+   "aggregations": {
+      "share_percentile_ranks": {
+         "values": {
+            "10.0": 60.438782731776364,
+            "100.0": 89.91507430997878,
+            "1000.0": 97.37406386327386,
+            "10000.0": 99.31579836222765,
+            "1000000.0": 100,
+            "1.0E7": 100
+         }
+      },
+      "like_percentile_ranks": {
+         "values": {
+            "10.0": 39.281828073993466,
+            "100.0": 79.39530545624125,
+            "1000.0": 90.98349676683587,
+            "10000.0": 94.14527905373414,
+            "1000000.0": 95.9014681663581,
+            "1.0E7": 96.57661015941164
+         }
+      },
+      "comment_percentile_ranks": {
+         "values": {
+            "10.0": 49.865951742627345,
+            "100.0": 92.18395545473294,
+            "1000.0": 98.92761394101876,
+            "10000.0": 99.56773202397807,
+            "1000000.0": 100,
+            "1.0E7": 100
+         }
+      }
+   }
+}
+[/code]</p>
+<blockquote>
+<p>As we can see, only 0.7% posts have more than 10k shares, onley 0.04% posts have more than 10k comment, but there is an odd here. 4.1% posts have more than 1M like (WHAT!!!). We can spot some strange here.</p>
+</blockquote>
+<h3 id="top-hits-aggregation">Top hits Aggregation</h3>
+<p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-top-hits-aggregation.html">Doc: Top hits Aggregation</a></p>
+<p><strong>Example</strong></p>
+<p>Request</p>
+<p>[code lang="javascript"]
+[/code]</p>
+<p>Response</p>
+<p>[code lang="javascript"]
+{</p>
+<p>[/code]</p>
+<h3 id="an-aggregation">An Aggregation</h3>
+<p><a href="../link">Doc: Link</a></p>
+<p><strong>Example</strong></p>
+<p>Request</p>
+<p>[code lang="javascript"]
+[/code]</p>
+<p>Response</p>
+<p>[code lang="javascript"]
+{</p>
+<p>[/code]</p>
+<h1 id="config">Config</h1>
+<p><code>elasticsearch.yml</code></p>
+<p>[code]
+discovery.zen.minimum_master_nodes: 1
+discovery.zen.ping.multicast.enabled: false
+discovery.zen.ping.unicast.hosts: ["localhost"]</p>
+<p>network.host: 0.0.0.0
+http.cors.enabled: true
+http.cors.allow-origin: '*'
+script.inline: on
+script.indexed: on
+[/code]</p>
+<h1 id="docker">Docker</h1>
+<p><strong>Image</strong></p>
+<p><a href="https://hub.docker.com/r/_/elasticsearch/">https://hub.docker.com/r/_/elasticsearch/</a></p>
+<p><strong>Run</strong></p>
+<p>[code]
+docker run -d -v "$PWD/esdata":/usr/share/elasticsearch/data elasticsearch
+[/code]</p>
+<p>Docker Folder
+[code]
+elasticsearch/
+├── config
+│   └── elasticsearch.yml
+└── Dockerfile
+[/code]</p>
+<p><code>Dockerfile</code></p>
+<p>[code]
+FROM elasticsearch:2.2.0</p>
+<p>ADD config/elasticsearch.yml /elasticsearch/config/elasticsearch.yml
+[/code]</p>
+<p><strong>Compose</strong></p>
+<p>[code]
+elasticsearch:
+    build: ./elasticsearch/.
+    ports:
+       - 9200:9200
+       - 9300:9300
+    volumes:
+       - ./data/elasticsearch:/usr/share/elasticsearch/data
+[/code]</p>
+<h1 id="elasticsearch-search-ignore-accents">Elasticsearch: Search Ignore Accents</h1>
+<p>The ICU <sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> <sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup> analysis plug-in for Elasticsearch uses the International Components for Unicode (ICU) libraries to provide a rich set of tools for dealing with Unicode. These include the icu_tokenizer, which is particularly useful for Asian languages, and a number of token filters that are essential for correct matching and sorting in all languages other than English.</p>
+<h2 id="step-1-install-icu-plugin-3">Step 1: Install ICU-Plugin <sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup></h2>
+<p>[code]
+cd /usr/share/elasticsearch
+sudo bin/plugin install analysis-icu
+[/code]</p>
+<h2 id="step-2-create-an-analyzer-setting">Step 2: Create an analyzer setting:</h2>
+<p>[code]
+"settings": {
+      "analysis": {
+         "analyzer": {
+            "vnanalysis": {
+               "tokenizer": "icu_tokenizer",
+               "filter": [
+                  "icu_folding",
+                  "icu_normalizer"
+               ]
+            }
+         }
+      }
+   }
+[/code]</p>
+<h2 id="step-3-create-your-index-create-a-field-with-type-string-and-analyzer-is-vnanalysis-you-have-created">Step 3: Create your index, create a field with type string and analyzer is <code>vnanalysis</code> you have created</h2>
+<p>[code]
+"key": {
+     "type": "string",
+     "analyzer": "vnanalysis"
+}
+[/code]</p>
+<h2 id="step-4-search-with-sense">Step 4: Search with <code>sense</code></h2>
+<p>[code]
+POST /your_index/your_doc_type/_search
+{
+   "query": {
+      "match": {
+         "key": "kiem tra"
+      }
+   }
+}
+[/code]</p>
+<h1 id="es-import-csv-to-elasticsearch">ES: Import CSV to Elasticsearch</h1>
+<p>https://gist.github.com/clemsos/8668698</p>
+<h1 id="install-lastest-elasticdump-with-nvm">Install lastest Elasticdump with NVM</h1>
+<p>As a matter of best practice we’ll update our packages:</p>
+<p>[code]
+apt-get update
+[/code]</p>
+<p>The build-essential package should already be installed, however, we’re going still going to include it in our command for installation:
+[code]
+apt-get install build-essential libssl-dev
+[/code]</p>
+<p>To install or update nvm, you can use the install script using cURL:</p>
+<p>[code]
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
+[/code]</p>
+<p>if you have below problem or after you type <code>nvm ls-remote</code> command it result N/A:
+<code>curl: (77) error setting certificate verify locations:
+  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none</code></p>
+<p>head to this <sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>:</p>
+<p>or Wget:</p>
+<p>[code]
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
+[/code]</p>
+<p><em>Don't forget to restart your terminal</em></p>
+<p>Then you use the following command to list available versions of nodejs</p>
+<p>[code]
+nvm ls-remote
+[/code]</p>
+<p>To download, compile, and install the latest v5.0.x release of node, do this:</p>
+<p>[code]
+nvm install 5.0
+[/code]</p>
+<p>And then in any new shell just use the installed version:</p>
+<p>[code]
+nvm use 5.0
+[/code]</p>
+<p>Or you can just run it:</p>
+<p>[code]
+nvm run 5.0 --version
+[/code]</p>
+<p>Or, you can run any arbitrary command in a subshell with the desired version of node:</p>
+<p>[code]
+nvm exec 4.2 node --version
+[/code]</p>
+<p>You can also get the path to the executable to where it was installed:</p>
+<p>[code]
+nvm which 5.0
+[/code]</p>
+<p><a href="https://github.com/creationix/nvm">Node Version Manager</a></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="http://stackoverflow.com/questions/26476744/nvm-ls-remote-command-results-in-n-a">how to solve https problem</a>&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://github.com/elastic/elasticsearch-analysis-icu">ICU plug-in Github</a>&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-icu.html">Installing the ICU plug-in</a>&#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
