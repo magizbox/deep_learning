@@ -1,5 +1,7 @@
 site_name: DeepLearning
 pages:
 - "Home": 'index.md'
+- "Docs":
+  - "CNN": 'cnn.md'
 markdown_extensions:
     - footnotes
