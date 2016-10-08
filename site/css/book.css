@@ -1,0 +1,35 @@
+.book {
+    width: 50%;
+    float: left;
+    height: 180px;
+}
+
+.book .thumb {
+    width: 30%;
+    float: left;
+    height: auto;
+}
+
+.book .thumb img {
+    padding: 0px !important;
+    margin: 0px !important;
+    border-radius: 4px !important;
+    max-height: 150px;
+}
+
+.book .description {
+    width: 60%;
+    padding-left: 10px;
+    float: left;
+}
+
+.book .description .title {
+    color: #0388a6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.book .description .published {
+    font-size: smaller;
+}
+

@@ -2,6 +2,17 @@ site_name: DeepLearning
 pages:
 - "Home": 'index.md'
 - "Docs":
+  - "Introduction": 'introduction.md'
   - "CNN": 'cnn.md'
 markdown_extensions:
     - footnotes
+extra_css:
+  - css/book.css
+  - css/course.css
+  - css/video.css
+extra_javascript:
+  - js/underscore.js
+  - js/gspreadsheet.js
+  - js/book.js
+  - js/course.js
+  - js/video.js

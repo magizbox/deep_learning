@@ -1,0 +1,62 @@
+.course {
+    float: left;
+    width: 100%;
+    min-height: 150px;
+    margin-bottom: 20px;
+}
+
+.course .thumb {
+    float: left;
+    width: 20%;
+    text-align: center;
+    background: #fafbfc;
+}
+
+.course .thumb img {
+    padding: 0px !important;
+    margin: 0px !important;
+    border-radius: 4px !important;
+    border: 0px;
+    max-height: 150px;
+}
+
+.course .description {
+    float: left;
+    padding-left: 15px;
+    width: 80%;
+}
+
+.course .description a {
+    font-size: 18px;
+}
+
+
+.course .content {
+    text-align: justify;
+    font-size: 16px;
+    font-family: "Open Sans";
+    margin-bottom: 8px;
+}
+
+.course .date {
+    font-size: 10px;
+}
+
+.course .build {
+    color: #767676;
+    line-height: 1.6;
+    font-weight: normal;
+    font-family: "Open Stans";
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.course .organization {
+    font-family: Open Sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.course .provider {
+    font-size: 14px !important;
+    font-weight: bold;
+}
