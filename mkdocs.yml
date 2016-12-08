@@ -16,3 +16,8 @@ extra_javascript:
   - js/book.js
   - js/course.js
   - js/video.js
+extra_javascript:
+    - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+markdown_extensions:
+    - mdx_math
