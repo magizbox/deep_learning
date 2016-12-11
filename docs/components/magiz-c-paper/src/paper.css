@@ -1,0 +1,42 @@
+.papers {
+    background: rgb(214, 214, 214);
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0.5%;
+}
+.paper {
+    background: white;
+    padding: 15px;
+    float: left;
+    width: 46%;
+    margin-top: 10px;
+    margin-left: 2.5%;
+    height: 250px;
+}
+
+.paper a {
+    font-size: 18px;
+}
+
+.paper .authors {
+    margin-top: 2px;
+    font-size: 16px;
+    color: rgb(94, 94, 94);
+}
+
+.paper .time {
+    font-size: 12px;
+    color: rgb(146, 146, 146);
+}
+
+.paper .external_links {
+    margin-top: 16px;
+}
+
+.paper .external_links a {
+    color: #555;
+}
+
+.paper .external_links a:hover {
+    color: #0060ac;
+}

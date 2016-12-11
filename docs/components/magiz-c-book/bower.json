@@ -1,0 +1,20 @@
+{
+  "name": "magiz-c-book",
+  "version": "1.0.0",
+  "authors": [
+    "Vu Anh <brother.rain.1024@gmail.com>"
+  ],
+  "description": "Book Component UI",
+  "keywords": [
+    "component"
+  ],
+  "license": "MIT",
+  "homepage": "http://magizbox.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

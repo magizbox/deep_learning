@@ -1,0 +1,32 @@
+{
+  "name": "magiz-c-course",
+  "authors": [
+    "Vu Anh <brother.rain.1024@gmail.com>"
+  ],
+  "description": "Book Component UI",
+  "keywords": [
+    "component"
+  ],
+  "license": "MIT",
+  "homepage": "http://magizbox.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
+  "_release": "9c1dd4b8d0",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "9c1dd4b8d0d74f3e5fcb2e49b3f8abf9c971648e"
+  },
+  "_source": "https://github.com/magizbox/magiz-c-course.git",
+  "_target": "*",
+  "_originalSource": "magiz-c-course",
+  "_direct": true
+}

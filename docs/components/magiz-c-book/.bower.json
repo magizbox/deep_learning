@@ -1,0 +1,29 @@
+{
+  "name": "magiz-c-book",
+  "authors": [
+    "Vu Anh <brother.rain.1024@gmail.com>"
+  ],
+  "description": "Book Component UI",
+  "keywords": [
+    "component"
+  ],
+  "license": "MIT",
+  "homepage": "http://magizbox.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "7619b8f766",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "7619b8f766f2507846a654b7e6006390c9b03aca"
+  },
+  "_source": "https://github.com/magizbox/magiz-c-book.git",
+  "_target": "*",
+  "_originalSource": "magiz-c-book",
+  "_direct": true
+}

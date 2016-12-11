@@ -1,0 +1,32 @@
+{
+  "name": "magiz-c-video",
+  "authors": [
+    "Vu Anh <brother.rain.1024@gmail.com>"
+  ],
+  "description": "Video Component UI",
+  "keywords": [
+    "component"
+  ],
+  "license": "MIT",
+  "homepage": "http://magizbox.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
+  "_release": "0b299e6a6e",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "0b299e6a6e5996b536b69c893ccf0191995f3ef1"
+  },
+  "_source": "https://github.com/magizbox/magiz-c-video.git",
+  "_target": "*",
+  "_originalSource": "magiz-c-video",
+  "_direct": true
+}

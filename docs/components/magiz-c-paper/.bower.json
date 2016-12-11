@@ -1,0 +1,29 @@
+{
+  "name": "magiz-c-paper",
+  "authors": [
+    "Vu Anh <brother.rain.1024@gmail.com>"
+  ],
+  "description": "Paper Component UI",
+  "keywords": [
+    "component"
+  ],
+  "license": "MIT",
+  "homepage": "http://magizbox.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "5f2fd0e929",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "5f2fd0e9292a41af76ad0ef43bf962fec1d82421"
+  },
+  "_source": "https://github.com/magizbox/magiz-c-paper.git",
+  "_target": "*",
+  "_originalSource": "magiz-c-paper",
+  "_direct": true
+}
