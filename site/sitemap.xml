@@ -3,8 +3,16 @@
 
     
     <url>
-     <loc>None/</loc>
-     <lastmod>2016-12-11</lastmod>
+     <loc>/</loc>
+     <lastmod>2017-02-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/getting_started/</loc>
+     <lastmod>2017-02-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,14 +20,14 @@
     
         
     <url>
-     <loc>None/introduction/</loc>
-     <lastmod>2016-12-11</lastmod>
+     <loc>/introduction/</loc>
+     <lastmod>2017-02-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/cnn/</loc>
-     <lastmod>2016-12-11</lastmod>
+     <loc>/cnn/</loc>
+     <lastmod>2017-02-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

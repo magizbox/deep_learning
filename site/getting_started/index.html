@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Getting Started - DeepLearning</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../components/magiz-c-book/src/book.css" rel="stylesheet">
+        <link href="../components/magiz-c-course/src/course.css" rel="stylesheet">
+        <link href="../components/magiz-c-video/src/video.css" rel="stylesheet">
+        <link href="../components/magiz-c-benchmark/src/benchmark.css" rel="stylesheet">
+        <link href="../components/magiz-c-paper/src/paper.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">DeepLearning</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="./">Getting Started</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Docs <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../introduction/">Introduction</a>
+</li>
+                            
+<li >
+    <a href="../cnn/">CNN</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="..">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../introduction/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#getting-started">Getting Started</a></li>
+        <li class="main "><a href="#tensorflow">Tensorflow</a></li>
+            <li><a href="#windows-installation">Windows Installation</a></li>
+            <li><a href="#word2vec-example">word2vec Example</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="getting-started">Getting Started</h1>
+<p>To start with deep learning, you can choose either tensorflow, theano</p>
+<h1 id="tensorflow">Tensorflow</h1>
+<h2 id="windows-installation">Windows Installation</h2>
+<p>In this section, I will introduce how to setup your tensorflow library working with GPU in Windows.</p>
+<p>My environment is:</p>
+<ul>
+<li>Windows 8.1 Pro 64-bit</li>
+<li>Graphic Card: NVIDIA GeForce GTX 980</li>
+</ul>
+<p>What are missing?</p>
+<ul>
+<li>Anaconda</li>
+<li>CUDA Toolkit 8.0 (cuda_8.0.44_windows.exe)</li>
+<li>CUDNN - CUDA for Deep Neural Networks (cudnn-8.0-windows7-x64-v5.1.zip)</li>
+<li>tensorflow</li>
+</ul>
+<h3 id="anaconda">Anaconda</h3>
+<p>Anaconda is the leading open data science platform powered by Python. The open source version of Anaconda is a high performance distribution of Python and R and includes over 100 of the most popular Python, R and Scala packages for data science.</p>
+<p>Step 1: Download the <a href="http://continuum.io/downloads.html">Anaconda installer</a></p>
+<p>Step 2: Double click the Anaconda installer and follow the prompts to install to the default location.</p>
+<p>After a successful installation you will see output like this:</p>
+<p><img alt="" src="https://docs.continuum.io/_images/anaconda-install-win.png" /></p>
+<h3 id="cuda-toolkit-80">CUDA Toolkit 8.0</h3>
+<p>The NVIDIA CUDA Toolkit provides a comprehensive development environment for C and C++ developers building GPU-accelerated applications. The CUDA Toolkit includes a compiler for NVIDIA GPUs, math libraries, and tools for debugging and optimizing the performance of your applications. You’ll also find programming guides, user manuals, API reference, and other documentation to help you get started quickly accelerating your application with GPUs.</p>
+<p>Step 1: Verify the system has a CUDA-capable GPU.</p>
+<p>Step 2: Download the <a href="http://developer.nvidia.com/cuda-downloads">NVIDIA CUDA Toolkit</a>.</p>
+<p>Step 3: Install the NVIDIA CUDA Toolkit.</p>
+<p>Step 4: Test that the installed software runs correctly and communicates with the hardware.</p>
+<p><img alt="" src="../images/cuda_8.png" /></p>
+<h3 id="cudnn">cuDNN</h3>
+<p>The NVIDIA CUDA Deep Neural Network library (cuDNN) is a GPU-accelerated library of primitives for deep neural networks. cuDNN provides highly tuned implementations for standard routines such as forward and backward convolution, pooling, normalization, and activation layers. cuDNN is part of the NVIDIA Deep Learning SDK.</p>
+<p>Step 1: Register an NVIDIA developer account</p>
+<p>Step 2: Download <a href="https://developer.nvidia.com/cudnn">cuDNN v5.1</a>, you will get file like that <code>cudnn-8.0-windows7-x64-v5.1.zip</code></p>
+<p><img alt="" src="../images/cudnn_download.png" /></p>
+<p>Step 3: Copy CUDNN files to CUDA install</p>
+<p>Extract your <code>cudnn-8.0-windows7-x64-v5.1.zip</code> file, and copy files to corresponding CUDA folder</p>
+<p>In my environment, CUDA installed in <code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0</code>, you must copy append three folders <code>bin</code>, <code>include</code>, <code>lib</code></p>
+<p><img alt="" src="../images/cudnn_files.png" /></p>
+<h3 id="tensorflow_1">Tensorflow</h3>
+<p>CPU TensorFlow environment</p>
+<pre><code>conda create --name tensorflow python=3.5
+activate tensorflow
+conda install -y jupyter scipy
+pip install tensorflow
+</code></pre>
+
+<p>GPU TensorFlow environment</p>
+<pre><code>conda create --name tensorflow-gpu python=3.5
+activate tensorflow-gpu
+conda install -y jupyter scipy
+pip install tensorflow-gpu
+</code></pre>
+
+<p><strong>References</strong></p>
+<ul>
+<li>Using TensorFlow in Windows with a GPU, <a href="http://www.heatonresearch.com/2017/01/01/tensorflow-windows-gpu.html">http://www.heatonresearch.com/2017/01/01/tensorflow-windows-gpu.html</a></li>
+<li>sentdex, Installing CPU and GPU TensorFlow on Windows, <a href="https://www.youtube.com/watch?v=r7-WPbx8VuY">https://www.youtube.com/watch?v=r7-WPbx8VuY</a></li>
+</ul>
+<h2 id="word2vec-example">word2vec Example</h2>
+<p>Step 1: Download word2vec example from <a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/tutorials/word2vec/word2vec_basic.py">github</a></p>
+<pre><code>$ dir
+
+02/06/2017  11:45    &lt;DIR&gt;          .
+02/06/2017  11:45    &lt;DIR&gt;          ..
+02/06/2017  10:12             9,144 word2vec_basic.py
+</code></pre>
+
+<p>Step 2: Run <code>word2vec_basic</code> example</p>
+<pre><code>$ activate tensorflow-gpu
+$ python word2vec_basic.py
+
+Found and verified text8.zip
+Data size 17005207
+Most common words (+UNK) [['UNK', 418391], ('the', 1061396), ('of', 593677), ('and', 416629), ('one', 411764)]
+Sample data [5241, 3082, 12, 6, 195, 2, 3136, 46, 59, 156] ['anarchism', 'originated', 'as', 'a', 'term', 'of', 'abuse', 'first', 'used', 'against']
+3082 originated -&gt; 5241 anarchism
+3082 originated -&gt; 12 as
+12 as -&gt; 6 a
+12 as -&gt; 3082 originated
+6 a -&gt; 195 term
+6 a -&gt; 12 as
+195 term -&gt; 2 of
+195 term -&gt; 6 a
+Initialized
+Average loss at step  0 :  288.173675537
+Nearest to its: nasl, tinkering, derivational, yachts, emigrated, fatalism, kingston, kochi,
+Nearest to into: streetcars, neglecting, deutschlands, lecture, realignment, bligh, donau, medalists,
+Nearest to state: canterbury, exceptions, disaffection, crete, westernmost, earthly, organize, richland,
+...
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
+        <script src="../components/underscore/underscore.js"></script>
+        <script src="../components/magiz-c-book/src/gspreadsheet.js"></script>
+        <script src="../components/magiz-c-paper/src/paper.js"></script>
+        <script src="../components/magiz-c-course/src/course.js"></script>
+        <script src="../components/magiz-c-benchmark/src/benchmark.js"></script>
+        <script src="../components/magiz-c-benchmark/src/bootstrap-popup.js"></script>
+        <script src="../components/magiz-c-book/src/book.js"></script>
+        <script src="../components/magiz-c-video/src/video.js"></script>
+        <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

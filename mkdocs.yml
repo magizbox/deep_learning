@@ -1,6 +1,7 @@
 site_name: DeepLearning
 pages:
 - "Home": 'index.md'
+- "Getting Started": 'getting_started.md'
 - "Docs":
   - "Introduction": 'introduction.md'
   - "CNN": 'cnn.md'
