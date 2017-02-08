@@ -18,6 +18,7 @@
         <link href="../components/magiz-c-video/src/video.css" rel="stylesheet">
         <link href="../components/magiz-c-benchmark/src/benchmark.css" rel="stylesheet">
         <link href="../components/magiz-c-paper/src/paper.css" rel="stylesheet">
+        <link href="../components/magiz-c-feed/src/feed.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -69,6 +70,9 @@
 </li>
                         </ul>
                     </li>
+                    <li >
+                        <a href="../feed/"><span class='fa fa-rss'></span> News</a>
+                    </li>
                 </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -97,7 +101,7 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#getting-started">Getting Started</a></li>
         <li class="main "><a href="#tensorflow">Tensorflow</a></li>
-            <li><a href="#windows-installation">Windows Installation</a></li>
+            <li><a href="#install-in-windows">Install in Windows</a></li>
             <li><a href="#word2vec-example">word2vec Example</a></li>
     </ul>
 </div></div>
@@ -106,7 +110,7 @@
 <h1 id="getting-started">Getting Started</h1>
 <p>To start with deep learning, you can choose either tensorflow, theano</p>
 <h1 id="tensorflow">Tensorflow</h1>
-<h2 id="windows-installation">Windows Installation</h2>
+<h2 id="install-in-windows">Install in Windows</h2>
 <p>In this section, I will introduce how to setup your tensorflow library working with GPU in Windows.</p>
 <p>My environment is:</p>
 <ul>
@@ -118,7 +122,7 @@
 <li>Anaconda</li>
 <li>CUDA Toolkit 8.0 (cuda_8.0.44_windows.exe)</li>
 <li>CUDNN - CUDA for Deep Neural Networks (cudnn-8.0-windows7-x64-v5.1.zip)</li>
-<li>tensorflow</li>
+<li>tensorflow package</li>
 </ul>
 <h3 id="anaconda">Anaconda</h3>
 <p>Anaconda is the leading open data science platform powered by Python. The open source version of Anaconda is a high performance distribution of Python and R and includes over 100 of the most popular Python, R and Scala packages for data science.</p>
@@ -142,7 +146,7 @@
 <p>Extract your <code>cudnn-8.0-windows7-x64-v5.1.zip</code> file, and copy files to corresponding CUDA folder</p>
 <p>In my environment, CUDA installed in <code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0</code>, you must copy append three folders <code>bin</code>, <code>include</code>, <code>lib</code></p>
 <p><img alt="" src="../images/cudnn_files.png" /></p>
-<h3 id="tensorflow_1">Tensorflow</h3>
+<h3 id="install-tensorflow-package">Install Tensorflow Package</h3>
 <p>CPU TensorFlow environment</p>
 <pre><code>conda create --name tensorflow python=3.5
 activate tensorflow
@@ -211,6 +215,7 @@ Nearest to state: canterbury, exceptions, disaffection, crete, westernmost, eart
         <script src="../components/magiz-c-benchmark/src/bootstrap-popup.js"></script>
         <script src="../components/magiz-c-book/src/book.js"></script>
         <script src="../components/magiz-c-video/src/video.js"></script>
+        <script src="../components/magiz-c-feed/src/feed.js"></script>
         <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

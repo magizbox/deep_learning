@@ -1,0 +1,32 @@
+{
+  "name": "magiz-c-feed",
+  "authors": [
+    "Vu Anh <brother.rain.1024@gmail.com>"
+  ],
+  "description": "Feed Component UI",
+  "keywords": [
+    "component"
+  ],
+  "license": "MIT",
+  "homepage": "http://magizbox.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "^1.8.3",
+    "bootstrap": "^2.3.2"
+  },
+  "_release": "eff33fd0f0",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "eff33fd0f0d5cbd029bab69c198d1a436dc988ec"
+  },
+  "_source": "https://github.com/magizbox/magiz-c-feed.git",
+  "_target": "*",
+  "_originalSource": "magiz-c-feed"
+}

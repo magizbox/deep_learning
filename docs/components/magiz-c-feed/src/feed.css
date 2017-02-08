@@ -1,0 +1,16 @@
+a.feed-title {
+    color: #333;
+}
+a.feed-title:hover, a.feed-title:focus {
+    color: #000;
+}
+.feed-metadata {
+    font-size: 12px;
+    font-family: "sans-serif";
+    color: #9e9e9e;
+}
+
+.feed-content {
+    text-align: justify;
+    color: #9e9e9e;
+}
