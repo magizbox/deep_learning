@@ -1,0 +1,117 @@
+name: tensorflow
+channels:
+- !!python/unicode
+  'defaults'
+dependencies:
+- !!python/unicode
+  'colorama=0.3.7=py35_0'
+- !!python/unicode
+  'decorator=4.0.11=py35_0'
+- !!python/unicode
+  'entrypoints=0.2.2=py35_0'
+- !!python/unicode
+  'icu=57.1=vc14_0'
+- !!python/unicode
+  'ipykernel=4.5.2=py35_0'
+- !!python/unicode
+  'ipython=5.1.0=py35_0'
+- !!python/unicode
+  'ipython_genutils=0.1.0=py35_0'
+- !!python/unicode
+  'ipywidgets=5.2.2=py35_1'
+- !!python/unicode
+  'jinja2=2.9.4=py35_0'
+- !!python/unicode
+  'jpeg=9b=vc14_0'
+- !!python/unicode
+  'jsonschema=2.5.1=py35_0'
+- !!python/unicode
+  'jupyter=1.0.0=py35_3'
+- !!python/unicode
+  'jupyter_client=4.4.0=py35_0'
+- !!python/unicode
+  'jupyter_console=5.0.0=py35_0'
+- !!python/unicode
+  'jupyter_core=4.2.1=py35_0'
+- !!python/unicode
+  'libpng=1.6.27=vc14_0'
+- !!python/unicode
+  'markupsafe=0.23=py35_2'
+- !!python/unicode
+  'mistune=0.7.3=py35_0'
+- !!python/unicode
+  'mkl=2017.0.1=0'
+- !!python/unicode
+  'nbconvert=4.2.0=py35_0'
+- !!python/unicode
+  'nbformat=4.2.0=py35_0'
+- !!python/unicode
+  'notebook=4.3.1=py35_1'
+- !!python/unicode
+  'numpy=1.11.3=py35_0'
+- !!python/unicode
+  'openssl=1.0.2k=vc14_0'
+- !!python/unicode
+  'path.py=10.0=py35_0'
+- !!python/unicode
+  'pickleshare=0.7.4=py35_0'
+- !!python/unicode
+  'pip=9.0.1=py35_1'
+- !!python/unicode
+  'prompt_toolkit=1.0.9=py35_0'
+- !!python/unicode
+  'pygments=2.1.3=py35_0'
+- !!python/unicode
+  'pyqt=5.6.0=py35_2'
+- !!python/unicode
+  'python=3.5.2=0'
+- !!python/unicode
+  'pyzmq=16.0.2=py35_0'
+- !!python/unicode
+  'qt=5.6.2=vc14_3'
+- !!python/unicode
+  'qtconsole=4.2.1=py35_2'
+- !!python/unicode
+  'scipy=0.18.1=np111py35_1'
+- !!python/unicode
+  'setuptools=27.2.0=py35_1'
+- !!python/unicode
+  'simplegeneric=0.8.1=py35_1'
+- !!python/unicode
+  'sip=4.18=py35_0'
+- !!python/unicode
+  'six=1.10.0=py35_0'
+- !!python/unicode
+  'tornado=4.4.2=py35_0'
+- !!python/unicode
+  'traitlets=4.3.1=py35_0'
+- !!python/unicode
+  'vs2015_runtime=14.0.25123=0'
+- !!python/unicode
+  'wcwidth=0.1.7=py35_0'
+- !!python/unicode
+  'wheel=0.29.0=py35_0'
+- !!python/unicode
+  'widgetsnbextension=1.2.6=py35_0'
+- !!python/unicode
+  'win_unicode_console=0.5=py35_0'
+- !!python/unicode
+  'zlib=1.2.8=vc14_3'
+- pip:
+  - cycler==0.10.0
+  - ipython-genutils==0.1.0
+  - jupyter-client==4.4.0
+  - jupyter-console==5.0.0
+  - jupyter-core==4.2.1
+  - matplotlib==2.0.0
+  - prompt-toolkit==1.0.9
+  - protobuf==3.2.0
+  - pyparsing==2.1.10
+  - python-dateutil==2.6.0
+  - pytz==2016.10
+  - scikit-learn==0.18.1
+  - sklearn==0.0
+  - tensorflow==0.12.1
+  - win-unicode-console==0.5
+prefix: !!python/unicode 'C:\ProgramData\Anaconda2\envs\tensorflow'
+
