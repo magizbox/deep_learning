@@ -4,7 +4,8 @@ pages:
 - "Getting Started": 'getting_started.md'
 - "Docs":
   - "Introduction": 'introduction.md'
-  - "CNN": 'cnn.md'
+  - "Recurent Neural Network": 'rnn.md'
+  - "Convolutional Neural Network": 'cnn.md'
 - "<span class='fa fa-rss'></span> News": "feed.md"
 
 extra_css:
