@@ -1,4 +1,4 @@
 mkdocs build --clean
 git add -A
 git commit -m "update docs"
-git push origin rnn
+git push origin lab_rnn
