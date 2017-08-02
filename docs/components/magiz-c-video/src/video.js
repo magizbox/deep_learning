@@ -5,7 +5,6 @@ $(".videos").each(function(index, videos) {
   var gid = $(this).attr("gid");
   var rootDom = this;
   getJSONFromGoogleSpreadsheet(gid, function (videos) {
-    console.log(videos[0]);
     _.each(videos, function (video) {
       if(video.name.length > 80){
         video.name = video.name.substring(0, 78) + "...";

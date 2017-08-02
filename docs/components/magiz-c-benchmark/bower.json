@@ -1,6 +1,6 @@
 {
   "name": "magiz-c-benchmark",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "authors": [
     "Vu Anh <brother.rain.1024@gmail.com>"
   ],
@@ -16,5 +16,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "^2.0.3",
+    "underscore": "^1.8.3",
+    "bootstrap": "^3.0.3"
+  }
 }

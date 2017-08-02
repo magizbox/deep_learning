@@ -1,0 +1,95 @@
+.highlight-table {
+    background: black;
+}
+
+.highlight-table td:first-child {
+    color: #fff;
+    padding-right: .25em;
+    font-size: .9375em;
+    white-space: pre;
+    font-family: "Source Code Pro", monospace;
+}
+
+.highlight-table th {
+    background: rgba(105, 105, 105, 0.71) !important;
+    text-align: left;
+    padding: .125rem 0 .125rem .375rem;
+    border: none !important;
+    color: rgba(255, 255, 255, 0.68) !important;
+}
+
+.highlight-table td {
+    background: rgb(37, 38, 44) !important;
+    line-height: 1em;
+    padding: 1px 0 4px;
+    color: rgb(150, 153, 166);
+    border-top: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, .04);
+}
+
+.highlight-table a {
+    color: white !important;
+}
+
+.highlight-table .example {
+    padding: 0px !important;
+}
+
+/**
+ f: stands for formula
+ t: stands for text
+ h: stands for highlight
+ hb: stands for highlight background, for example hby - highlight background yellow, hbg - highlight background green
+ */
+.highlight-table f {
+    padding: 8px;
+    background: white;
+    color: black;
+    font-size: 14px;
+    font-weight: bolder;
+    font-family: monospace;
+    display: block;
+    border-top: solid 2px #c3c3c3;
+}
+
+.highlight-table f h {
+    color: rgb(221, 119, 0);
+}
+
+.highlight-table f ho {
+    color: rgb(221, 119, 0);
+}
+
+.highlight-table f hg {
+    color: #090;
+}
+
+.highlight-table f hb {
+    color: #35f;
+}
+.highlight-table f hp {
+    color: #FF00FF;
+}
+
+.highlight-table f hbg {
+    background-color: rgba(0, 238, 0, 0.1);
+}
+
+.highlight-table f hby {
+    background-color: rgba(255, 246, 0, 0.2);
+}
+
+.highlight-table t {
+    background: white;
+    border-top: solid 2px rgba(189, 189, 189, 0.28);
+    padding: 8px;
+    font-family: monospace;
+    color: black;
+    display: block;
+}
+
+.highlight-table t h {
+    background: #6CF;
+    margin-right: 2px;
+}
+

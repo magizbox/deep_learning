@@ -1,0 +1,58 @@
+body {
+    background: None;
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+h2 {
+    font-size: 19px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 15px;
+}
+
+pre {
+    border: None;
+    background-color: rgb(239, 240, 241);
+    border-radius: 0px !important;
+}
+
+blockquote {
+    padding: 10px;
+    border-left-width: 2px;
+    background-color: #FFF8DC;
+    border-left: 2px solid #ffeb8e;
+}
+
+code {
+    padding: 1px 5px;
+    border: None;
+    border-radius: 0px;
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, sans-serif;
+    background-color: #eff0f1;
+}
+
+blockquote p {
+    font-size: 15px;
+}
+
+.well {
+    background: None;
+    border: None;
+    box-shadow: None;
+}
+footer {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 200;
+    visibility: hidden;
+}
