@@ -1,0 +1,73 @@
+img {
+    width: 100%;
+}
+
+dt-header {
+    display: block;
+    position: relative;
+    height: 51px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2;
+    color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+    background-color: rgb(14, 180, 147);
+}
+
+dt-header .content {
+}
+
+dt-header a {
+    line-height: 50px;
+    padding: 28px 0;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+dt-header a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+dt-footer {
+    display: block;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 300;
+    padding: 40px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: hsl(200, 60%, 15%);
+    text-align: center;
+}
+dt-footer .logo svg {
+    width: 24px;
+    position: relative;
+    top: 4px;
+    margin-right: 2px;
+}
+dt-footer .logo svg path {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.8);
+    stroke-width: 3px;
+}
+dt-footer .logo {
+    font-size: 17px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin-right: 6px;
+}
+dt-footer .nav {
+    margin-top: 12px;
+}
+dt-footer .nav a {
+    color: rgba(255, 255, 255, 0.8);
+    margin-right: 6px;
+}
+
+line-break {
+    width: 100%;
+}
+
+dt-banner {
+    display: none !important;
+}
