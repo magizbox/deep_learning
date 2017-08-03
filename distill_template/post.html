@@ -1,0 +1,23 @@
+{% include "header.html" %}
+
+<script type="text/front-matter">
+  title: "{{ site_name }}"
+  description: "resources and pointers to information about Deep Learning"
+  authors:
+  - Vu Anh: http://magizbox.com/rain1024
+  affiliations:
+  - MagizBox: http://magizbox.com
+</script>
+
+<dt-header>
+<div class="content l-page">
+<a href="/" class="logo">
+<i class="fa fa-magic" aria-hidden="true"></i>
+{{ site_name }}
+</a>
+</div>
+</dt-header>
+
+{% block content %}{% endblock %}
+
+{% include "footer.html" %}

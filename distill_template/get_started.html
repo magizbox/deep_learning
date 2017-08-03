@@ -1,33 +1,6 @@
-<!doctype html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="css/distill.css">
-<link rel="stylesheet" href="css/font-awesome-4.5.0.css">
-<link rel="shortcut icon" href="./favicon.ico">
-<script src="https://distill.pub/template.v1.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.7.1/showdown.min.js"></script>
+{% extends "post.html" %}
 
-<script type="text/front-matter">
-  title: "Get Started"
-  description: ""
-  authors:
-  - Vu Anh: http://magizbox.com/users/rain1024.html
-  affiliations:
-  - MagizBox: http://magizbox.com
-
-
-
-</script>
-
-<dt-header>
-<div class="content l-page">
-<a href="/" class="logo">
-<i class="fa fa-magic" aria-hidden="true"></i>
-Deep Learning
-</a>
-</div>
-</dt-header>
-
+{% block content %}
 <dt-article class="centered">
 <h1>Get Started</h1>
 <dt-byline></dt-byline>
@@ -161,27 +134,12 @@ Nearest to state: canterbury, exceptions, disaffection, crete, westernmost, eart
 </dt-article>
 
 <dt-appendix>
-
 <div class="markdown">
 ### References
 
 * [Using TensorFlow in Windows with a GPU](http://www.heatonresearch.com/2017/01/01/tensorflow-windows-gpu.html)
 * [sentdex, Installing CPU and GPU TensorFlow on Windows](https://www.youtube.com/watch?v=r7-WPbx8VuY)
 </div>
-
 </dt-appendix>
 
-<script src="js/markdown.js"></script>
-
-<dt-footer>
-<div class="l-page">
-<div class="description">
-<a href="http://magizbox.com" class="logo"> <i class="fa fa-magic" aria-hidden="true"></i> magizbox</a> is dedicated to clear explanations of computer science, data science and software development.
-</div>
-<div class="nav">
-<a href="/">Deep Learning documentation</a>
-<a href="http://magizbox.com">Magizbox</a>
-<a href="https://github.com/magizbox/deep_learning">Github</a>
-</div>
-</div>
-</dt-footer>
+{% endblock %}

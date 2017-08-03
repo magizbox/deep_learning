@@ -12,4 +12,4 @@ if __name__ == '__main__':
     parser.add_argument("command")
     args = parser.parse_args()
     command = args.command
-    tasks["command"]()
+    tasks[command]()
