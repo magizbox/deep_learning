@@ -1,6 +1,15 @@
-# Deep Learning Tutorial <sup><i><a href="http://magizbox.com/">by MG</a></i></sup>
+<dt-article>
 
-> **Deep learning** (also known as deep structured learning, hierarchical learning or deep machine learning) is a branch of machine learning based on a set of algorithms that attempt to model high level abstractions in data by using a deep graph with multiple processing layers, composed of multiple linear and non-linear transformations.
+<h1>Deep Learning Tutorial</h1>
+
+<h2>This site is intended to host a variety of resources and pointers to information about Python.</h2>
+
+<hr>
+  <p>This is the first paragraph of the article.</p>
+  <p>We can also cite <dt-cite key="gregor2015draw"></dt-cite> external publications.</p>
+  
+</dt-article>
+
 
 ## Table of contents
 

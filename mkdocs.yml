@@ -1,4 +1,4 @@
-site_name: DeepLearning
+site_name: Deep Learning
 pages:
 - "Home": 'index.md'
 - "Get Started": 'get_started.md'
@@ -17,7 +17,6 @@ extra_css:
   - components/magiz-c-video/src/video.css
   - components/magiz-c-benchmark/src/benchmark.css
   - components/magiz-c-paper/src/paper.css
-  - components/magiz-doc/style.css
   - components/magiz-doc/highlight.css
 
 extra_javascript:

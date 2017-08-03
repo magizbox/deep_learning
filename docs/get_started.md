@@ -6,19 +6,6 @@ To start with deep learning, you can choose either tensorflow, theano
 
 ## Install in Windows
 
-In this section, I will introduce how to setup your tensorflow library working with GPU in Windows.
-
-My environment is:
-
-* Windows 8.1 Pro 64-bit
-* Graphic Card: NVIDIA GeForce GTX 980
-
-What are missing?
-
-* Anaconda
-* CUDA Toolkit 8.0 (cuda_8.0.44_windows.exe)
-* CUDNN - CUDA for Deep Neural Networks (cudnn-8.0-windows7-x64-v5.1.zip)
-* tensorflow package
 
 ### Anaconda
 

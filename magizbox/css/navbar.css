@@ -1,0 +1,22 @@
+.navbar-magicbox {
+    background-color: rgb(14, 180, 147);
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0px;
+}
+
+.navbar-magicbox a {
+    color: rgba(255, 255, 255, 0.90);
+    text-shadow: none;
+}
+
+.navbar-magicbox a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+dt-article hr {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
