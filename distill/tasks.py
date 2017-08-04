@@ -3,8 +3,11 @@ import os
 import shutil
 import webbrowser
 from http.server import HTTPServer, SimpleHTTPRequestHandler
-from os.path import dirname, join
-import yaml
+from jinja2 import Environment, select_autoescape, FileSystemLoader
+
+from distill.extend import PageExtendWorker
+from distill.site import load_site
+from distill.config import *
 
 
 def task_open_website():
@@ -20,51 +23,57 @@ def task_run_server():
     httpd.serve_forever()
 
 
-def _remove_site_folder():
-    project_folder = dirname(dirname(__file__))
-    site_folder = join(project_folder, 'site')
+def _bootstrap():
     try:
         shutil.rmtree(site_folder)
     except:
         pass
-    finally:
+    try:
+        shutil.rmtree(temp_site_folder)
+    except:
         pass
 
 
 def _copy_template():
-    project_folder = dirname(dirname(__file__))
-    site_folder = join(project_folder, 'site')
-    template_folder = join(project_folder, 'distill_template')
-    shutil.copytree(template_folder, site_folder)
-
-
-from jinja2 import Environment, select_autoescape, FileSystemLoader
+    shutil.copytree(template_folder, temp_site_folder)
 
 
 def _render_file(filename):
-    project_folder = dirname(dirname(__file__))
-    template_folder = join(project_folder, "distill_template")
-    site_folder = join(project_folder, "site")
-    with open(join(project_folder, "distill.yml"), "r") as f:
-        content = yaml.load(f)
+    site = load_site()
     env = Environment(
         autoescape=select_autoescape(['html', 'xml']),
-        loader=FileSystemLoader(template_folder))
+        loader=FileSystemLoader(temp_site_folder))
     template = env.get_template(filename)
-    output = template.render(content)
+    output = template.render(site)
     with open(join(site_folder, filename), "w", encoding="utf-8") as f:
         f.write(output)
 
 
+def _extend_template():
+    site = load_site()
+    for page in site["pages"]:
+        PageExtendWorker.extend(page, site)
+
+
 def _render_template():
-    # files = ["index.html", "cnn.html", "rnn.html"]
-    files = ["index.html", "cnn.html", "rnn.html", "get_started.html"]
+    site = load_site()
+    files = [p.page for p in site["pages"]]
+    shutil.copytree(temp_site_folder, site_folder)
     for f in files:
         _render_file(f)
 
 
+def _sweep():
+    try:
+        shutil.rmtree(temp_site_folder)
+    except:
+        pass
+
+
 def task_build():
-    _remove_site_folder()
+    _bootstrap()
     _copy_template()
+    _extend_template()
     _render_template()
+    _sweep()
     task_run_server()

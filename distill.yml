@@ -1,1 +1,21 @@
 site_name: Deep Learning
+site_description: resources and pointers to information about Deep Learning
+author:
+  - name: "Vu Anh"
+    url: "http://magizbox.com/users/rain1024"
+    affiliation_name: "Magizbox"
+    affiliation_url: "http://magizbox.com"
+pages:
+  - "Home":
+    - "type": "frontpage"
+    - "page": "index.html"
+  - "Get Started":
+    - "type": "post"
+    - "page": "get_started.html"
+  - "Convolutional Networks":
+    - "type": "post"
+    - "page": "cnn.html"
+  - "Recurrent Neural Networks":
+    - "type": "post"
+    - "page": "rnn.html"
+
