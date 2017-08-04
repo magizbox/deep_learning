@@ -18,4 +18,3 @@ pages:
   - "Recurrent Neural Networks":
     - "type": "post"
     - "page": "rnn.html"
-
