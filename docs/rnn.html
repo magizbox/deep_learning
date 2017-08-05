@@ -127,8 +127,7 @@ a brief overview so that you are familiar with the taxonomy of models.
 **Bidirectional RNNs** are based on the idea that the output at time t may not only depend on the previous elements in the sequence, but also future elements. For example, to predict a missing word in a sequence you want to look at both the left and the right context. Bidirectional RNNs are quite simple. They are just two RNNs stacked on top of each other. The output is then computed based on the hidden state of both RNNs.
 
 
-**Deep (Bidirectional) RNNs** are similar to Bidirectional RNNs, only that we now have multiple layers per time
-step. In practice this gives us a higher learning capacity (but we also need a lot of training data).
+**Deep (Bidirectional) RNNs** are similar to Bidirectional RNNs, only that we now have multiple layers per time step. In practice this gives us a higher learning capacity (but we also need a lot of training data).
 
 **Deep Bidirectional RNN** LSTM networks are quite popular these days and we briefly talked about them above. LSTMs don’t have a
 fundamentally different architecture from RNNs, but they use a different function to compute the hidden state.

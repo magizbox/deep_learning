@@ -1,5 +1,6 @@
 site_name: Deep Learning
 site_description: resources and pointers to information about Deep Learning
+google_analytics: ['UA-68978617-1', 'magizbox.com']
 author:
   - name: "Vu Anh"
     url: "http://magizbox.com/users/rain1024"
